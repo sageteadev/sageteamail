@@ -1,0 +1,2 @@
+module SageteaMail.Mail.Accounts
+plugin accounts-plugin

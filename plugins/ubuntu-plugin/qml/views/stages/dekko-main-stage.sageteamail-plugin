@@ -1,0 +1,5 @@
+{
+    "id": "ubuntu-main-stage",
+    "register" : "SageteaMail::Stage::Main",
+    "component" : "MainStage.qml"
+}

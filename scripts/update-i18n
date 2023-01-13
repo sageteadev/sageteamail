@@ -1,0 +1,27 @@
+#!/usr/bin/env python
+
+import sys
+import os
+import glob
+import shutil
+import subprocess
+from os.path import basename
+I18n_DIR = "i18n"
+
+if len(sys.argv) < 2:
+    print("usage: " + sys.argv[0] + " <source_dir1> <source_dir2> ...")
+    sys.exit(1)
+ 
+if not os.path.exists(I18n_DIR):
+    os.mkdir(I18n_DIR)
+
+# iterate over each ts file
+for i in os.listdir(I18n_DIR):
+    if i.endswith(".ts"):
+        ts_file = os.path.abspath(os.path.join(I18n_DIR, i))
+        try:
+            lupdate = subprocess.check_call(['lupdate', '-noobsolete', '-recursive'] + sys.argv[1:]  + ['-ts', ts_file])
+        except subprocess.CalledProcessError:
+            print("FAILED")
+            print("TS: " + ts_file)
+print("Were done")

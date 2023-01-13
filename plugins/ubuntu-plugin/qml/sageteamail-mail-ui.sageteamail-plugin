@@ -1,0 +1,6 @@
+{
+    "id": "ubuntu-mail-ui",
+    "register" : "SageteaMail::Mail",
+    "i18n" : "i18n",
+    "component" : "MainUI.qml"
+}

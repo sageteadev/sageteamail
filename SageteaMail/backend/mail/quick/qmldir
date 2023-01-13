@@ -1,0 +1,2 @@
+module SageteaMail.Mail
+plugin mail-plugin

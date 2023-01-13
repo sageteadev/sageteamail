@@ -1,0 +1,85 @@
+name: sageteamail
+version: 0.1.1
+summary: SageTea Mail Client
+description: Fast e-mail client for Ubuntu devices
+confinement: strict
+grade: devel
+
+apps:
+    sageteamail:
+        command: desktop-launch $SNAP/bin/sageteamail-launch "@"
+        plugs:
+            - browser-sandbox
+            - gsettings
+            - home
+            - network
+            - opengl
+            - platform
+            - unity7
+            - mir
+            - network-observe
+            - network-control
+            - network-bind
+
+plugs:
+    platform:
+        interface: content
+        content: ubuntu-app-platform1
+        target: ubuntu-app-platform
+        default-provider: ubuntu-app-platform
+    browser-sandbox:
+        interface: browser-support
+
+parts:
+    launcher:
+        plugin: dump
+        source: snap/
+        organize:
+            sageteamail.launcher: bin/sageteamail-launch
+        prime:
+            - -plugins
+    
+
+    sageteamail:
+        plugin: qbs
+        source: "."
+        profile: "clang"
+        build-variant: "release"
+        qt-version: qt5
+        build-packages:
+            - qttools5-dev-tools
+            - libgsettings-qt-dev
+            - libconnectivity-qt1-dev
+            - libnotify-dev
+            - libmessaging-menu-dev
+            - libunity-dev
+            - libsnappy-dev
+            - qtdeclarative5-private-dev
+            - qml-module-qtquick-privatewidgets
+            - libqt5svg5-dev
+            - python3-pip
+            - python3-dev
+            - python3-setuptools
+        stage-packages:
+            - libnotify-bin
+        prime:
+            - -usr/share/doc
+            - -usr/include
+        build-attributes: ["no-system-libraries"]
+        after: [desktop-ubuntu-app-platform]
+
+    pyotherside:
+        plugin: qmake
+        source: https://github.com/thp/pyotherside.git
+        qt-version: qt5
+        build-packages:
+            - python3-dev
+            - g++
+        stage-packages:
+            - libpython3.5
+        build-attributes: ["no-system-libraries"]
+        prime:
+            - usr/lib/*/qt5/qml
+            - usr/lib/*/libpython*
+        after: [sageteamail]
+

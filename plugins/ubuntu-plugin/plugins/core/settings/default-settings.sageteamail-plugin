@@ -1,0 +1,5 @@
+{
+    "id": "ubuntu-mail-settings",
+    "register" : "SageteaMail::Mail::Settings",
+    "component" : "SettingsWindow.qml"
+}

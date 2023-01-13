@@ -1,0 +1,3 @@
+module SageteaMail.Mail.Stores.Composer
+singleton ComposerStore 1.0 ComposerStore.qml
+internal ComposerStoreActions ComposerStoreActions.qml

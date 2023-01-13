@@ -1,0 +1,46 @@
+#! /bin/bash
+
+set -e
+
+function usage
+{
+    echo "$0 [debug]"
+}
+
+if [ $# -gt 1 ]; then
+    usage
+    exit 1
+fi
+
+if [ $# -eq 1 -a "$1" != "debug" ]; then
+    usage
+    exit 1
+fi
+
+ARCH_TRIPLE=x86_64-linux-gnu
+BUILD_TYPE=release
+
+if [ "$1" == "debug" ]; then
+    BUILD_TYPE=debug
+fi
+
+if [ "$INSTALL_PATH" == "" ]; then
+    INSTALL_PATH=$PWD/build/$ARCH_TRIPLE/$BUILD_TYPE/install-root/
+fi
+
+export LD_LIBRARY_PATH=$INSTALL_PATH/lib/$ARCH_TRIPLE/
+export QML2_IMPORT_PATH=$LD_LIBRARY_PATH
+export QMF_PLUGINS=$LD_LIBRARY_PATH/qmf/plugins5
+export SAGETEAMAIL_PLUGINS=$LD_LIBRARY_PATH/SageteaMail/plugins
+
+# Location qmf will store the mailstore cache
+export QMF_DATA=$HOME/.cache/sageteamail2
+
+echo $0
+echo $1
+
+if [ "$1" == "debug" ]; then
+    exec gdb --args $INSTALL_PATH/lib/$ARCH_TRIPLE/bin/sageteamail $@
+else
+    exec $INSTALL_PATH/lib/$ARCH_TRIPLE/bin/sageteamail $@
+fi

@@ -1,0 +1,8 @@
+#!/bin/bash
+
+SAGETEAMAIL_EXPORT_PATH=./lib/${UBUNTU_APP_LAUNCH_ARCH}/
+export SAGETEAMAIL_PLUGINS=${SAGETEAMAIL_EXPORT_PATH}/SageteaMail/plugins
+export QMF_PLUGINS=${SAGETEAMAIL_EXPORT_PATH}/qmf/plugins5
+export QMF_DATA=$HOME/.cache/sageteamail2.sagetea
+
+sageteamaild

@@ -1,0 +1,5 @@
+{
+    "id": "listener-plugin",
+    "register" : "SageteaMail::Listener",
+    "component" : "Listener.qml"
+}

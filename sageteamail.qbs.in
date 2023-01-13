@@ -1,0 +1,216 @@
+import qbs
+import qbs.Process
+
+Project {
+    id: sageteamail
+    name: "SageteaMail"
+    property string appName: "SageteaMail"
+    property string pkgName: "sageteamail2.sagetea"
+    property string version: "0.1.1"
+	property string arch: "%HOST_ARCH%"
+
+    Probe {
+        id: revprobe
+
+        // --git-dir needs to be pointed at the toplevel .git directory to work
+        property string sourceDir: sourceDirectory + "/.git"
+        property string setVersionBin: sourceDirectory + "/click/set-version"
+        property string version: project.version
+        property string arch: project.arch
+        property string revision
+
+        configure: {
+            revision = "no-git";
+            var p = new Process();
+            p.setWorkingDirectory(sourceDir)
+            if (p.exec("/usr/bin/git", ["--git-dir=" + sourceDir, "describe", "--long", "--always"], true) === 0)
+                revision = p.readStdOut().trim();
+                p.exec(setVersionBin, [version, arch], true)
+            p.close()
+        }
+    }
+    property string revision: revprobe.revision
+
+    property string binDir: "bin"
+    PropertyOptions {
+        name: "binDir"
+        description: "Location to install application binaries"
+    }
+
+    property string libDir: "lib"
+    PropertyOptions {
+        name: "libDir"
+        description: "Location to install shared libraries"
+    }
+
+    property string qmlDir: "lib"
+    PropertyOptions {
+        name: "qmlDir"
+        description: "Location to install QtQuick Plugins. Which can either already \
+                      be in the import path or can be picked up via QML2_IMPORT_PATH"
+    }
+
+    property string dataDir: "share/sageteamail"
+
+    property string pluginDir: binDir + "/plugins"
+
+    property bool click: false
+
+    property bool serverAsThread: false
+    PropertyOptions {
+        name: "serverAsThread"
+        description: "Run the messaging server as a qthread instead of a seperate qprocess"
+    }
+
+    property bool enableLogging: true
+    PropertyOptions {
+        name: "enableLogging"
+        description: "Enable qmf internal logging"
+    }
+
+    property bool unconfined: false
+    PropertyOptions {
+        name: "unconfined"
+        description: "Allow to run without worrying about platform confinement \
+                      - useful for debugging or running on tradition DE's."
+    }
+
+    property bool enableUOA: false
+    PropertyOptions {
+        name: "enableUOA"
+        description: "EXPERIMENTAL: enables online accounts integration"
+    }
+
+    property bool enableIMAP: true
+    PropertyOptions {
+        name: "enableIMAP"
+        description: "Enables IMAP service"
+    }
+
+    property bool enablePOP: true
+    PropertyOptions {
+        name: "enablePOP"
+        description: "Enables POP3 service"
+    }
+//    property bool outputTarBall: false
+
+    property string ui: "ubuntu"
+    PropertyOptions {
+        name: "ui"
+        description: "Which UI should the app be built with"
+        allowedValues: ["none", "ubuntu", "qqc2"]
+    }
+
+    property bool pyotherside: true
+
+    property bool buildAll: true
+
+    property bool outputTarPackage: false
+
+
+    qbsSearchPaths: [ path ]
+
+    references: [
+        "SageteaMail/components/components.qbs",
+        "SageteaMail/utils/utils.qbs",
+        "upstream/third-party.qbs",
+        "plugins/plugins.qbs",
+        "SageteaMail/backend/backend.qbs",
+        "SageteaMail/server/server.qbs",
+        "SageteaMail/app/app.qbs"
+    ]
+
+    DynamicLibrary {
+        name: "i18n"
+        type: "dynamiclibrary"
+
+        Depends { name: "cpp" }
+        Depends { name: "Qt.core" }
+
+        Group {
+            name: "ts files"
+            prefix: "i18n/"
+            files: [
+                "*.ts"
+            ]
+        }
+
+        Group {
+            qbs.install: true
+            qbs.installDir: project.binDir + "/plugins/ui/i18n"
+            fileTagsFilter: ["qm"]
+        }
+    }
+
+
+
+    DynamicLibrary {
+        name: "API"
+        Group {
+            name: "Public API"
+            files: ["SageteaMail/api/public/**"]
+            fileTags: ["public-qml-api"]
+            qbs.install: true
+            qbs.installDir: project.qmlDir + "/SageteaMail/Mail/API"
+            qbs.installSourceBase: "SageteaMail/api/public"
+        }
+
+        readonly property stringList qmlImportPaths: [ qbs.installRoot + "/" + project.qmlDir ]
+
+
+        Group {
+            name: "Private API"
+            files: ["SageteaMail/api/private/**"]
+            fileTags: ["private-qml-api"]
+            qbs.install: true
+            qbs.installDir: project.qmlDir + "/SageteaMail/Mail/API/Private"
+            qbs.installSourceBase: "SageteaMail/api/private"
+        }
+    }
+
+    DynamicLibrary {
+        name: "Stores"
+
+        Group {
+            name: "Mail Stores"
+            files: ["SageteaMail/stores/**"]
+            fileTags: ["mail-stores"]
+            qbs.install: true
+            qbs.installDir: project.qmlDir + "/SageteaMail/Mail/Stores"
+            qbs.installSourceBase: "SageteaMail/stores"
+        }
+        readonly property stringList qmlImportPaths: [
+            qbs.installRoot + "/" + project.qmlDir + "/"
+        ]
+    }
+
+    DynamicLibrary {
+        name: "Workers"
+
+        Group {
+            name: "Mail Workers"
+            files: ["SageteaMail/workers/**"]
+            fileTags: ["mail-workers"]
+            qbs.install: true
+            qbs.installDir: project.qmlDir + "/SageteaMail/Mail/Workers"
+            qbs.installSourceBase: "SageteaMail/workers"
+        }
+    }
+
+    Project {
+        name: "Packaging"
+
+        references: [
+            "click/click.qbs"
+        ]
+
+        Product {
+            name: "Snapcraft"
+            type: "packaging"
+            Group {
+                name: "Snapcraft"
+                files: "snap/**"
+            }
+        }
+    }
+}

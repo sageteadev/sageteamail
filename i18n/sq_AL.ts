@@ -2,6 +2,95 @@
 <!DOCTYPE TS>
 <TS version="2.1" language="sq_AL">
 <context>
+    <name>AccountSettings</name>
+    <message>
+        <source>Accounts</source>
+        <translation type="unfinished">Llogaritë</translation>
+    </message>
+    <message>
+        <source>New</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Edit</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Reset</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Remove</source>
+        <translation type="unfinished">Hiqë</translation>
+    </message>
+    <message>
+        <source>Remove %1?</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Remove account</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Removing messages</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Reset %1?</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Reset account</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>New default account</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&lt;qt&gt;Your previous default mail account has been unchecked&lt;/qt&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Account Modified</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Account Added</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Do you wish to test the configuration for this account?</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Testing configuration...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Configuration tested.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Retrieve Failure</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>%1 - Error retrieving folders: %2</source>
+        <comment>%1: account name, %2: error text</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Transmission Failure</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>%1 - Error testing connection: %2</source>
+        <comment>%1: account name, %2: error text</comment>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>AccountSettingsList</name>
     <message>
         <source>Details</source>
@@ -31,7 +120,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Sent using Dekko from my Ubuntu device</source>
+        <source>Sent with SageteaMail</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -82,6 +171,89 @@
     <message>
         <source>Add Collection</source>
         <translation>Shto Koleksion</translation>
+    </message>
+</context>
+<context>
+    <name>AttachmentOptions</name>
+    <message>
+        <source>Size</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Attachment</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Name</source>
+        <translation type="unfinished">Emri</translation>
+    </message>
+    <message>
+        <source>Type</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Add to documents</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Already added to Documents</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Download attachment</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Forward attachment</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source> of </source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Document not yet retrieved</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Play</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>View</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>No viewer available</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Error</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>No application associated with file of type</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Unable to create temporary file</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Unknown file type</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Saved in:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Unable to save attachment</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Please ensure that there is space available for Documents</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -142,6 +314,112 @@ Would you like to use this instead?</source>
     </message>
     <message>
         <source>New message</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>Browser</name>
+    <message>
+        <source>Today %1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Yesterday %1</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>BrowserWidget</name>
+    <message>
+        <source>Awaiting download</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Size of message</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Message part is not displayable</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Part</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Subject</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>From</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>To</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>CC</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>BCC</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Reply-To</source>
+        <translation type="unfinished">Përgjegjeje tek</translation>
+    </message>
+    <message>
+        <source>Date</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Message deleted from server</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Attachment</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source> (on server)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>No displayable part</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Message Id</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>CalendarInvitation</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Size of message content</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Download this message</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>More data available</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Size</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source> of </source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Retrieve more data</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -212,8 +490,8 @@ Would you like to use this instead?</source>
 <context>
     <name>ComposeWindow</name>
     <message>
-        <source>Dekko Composer</source>
-        <translation>Dekko Kompozitori</translation>
+        <source>SageteaMail Composer</source>
+        <translation>SageteaMail Kompozitori</translation>
     </message>
 </context>
 <context>
@@ -479,6 +757,41 @@ Would you like to use this instead?</source>
     </message>
 </context>
 <context>
+    <name>DetailsPage</name>
+    <message>
+        <source>To</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>CC</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>BCC</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Subject</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Delivery report</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Read reply</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>From</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Send</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>DialogWorker</name>
     <message>
         <source>Error</source>
@@ -528,6 +841,677 @@ Would you like to use this instead?</source>
     <message>
         <source>Display Settings</source>
         <translation>Cilësitë e ekranit</translation>
+    </message>
+</context>
+<context>
+    <name>EditAccount</name>
+    <message>
+        <source>Enabled</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Incoming</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Outgoing</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Storage</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Type</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Name</source>
+        <translation type="unfinished">Emri</translation>
+    </message>
+    <message>
+        <source>Create new account</source>
+        <comment>translation not longer than English</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Empty account name</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Do you want to quit and discard any changes?</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>None</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>EmailClient</name>
+    <message>
+        <source>Incomplete message</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Messages was previously interrupted while composing a message.
+Do you want to resume composing the message?</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>The Message server child process encountered an error (%1). Qtmail will now exit.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Message Server</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Synchronize</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Synchronize all your accounts.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Synchronize current account.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Cancel transfer</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Abort all transfer of mail.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>New</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Write a new message.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Search</source>
+        <translation type="unfinished">Kërko</translation>
+    </message>
+    <message>
+        <source>Search for messages in your folders.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Decide whether messages in this folder should be retrieved.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Create Folder</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Create folder and all messages and subfolders</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Delete Folder</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Delete folder and all messages and subfolders</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Rename Folder</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Give the folder a different name</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Account settings...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Create standard folders</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Work offline</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Enable Notifications</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Empty trash</source>
+        <translation type="unfinished">Zbraz shportën</translation>
+    </message>
+    <message>
+        <source>Select all</source>
+        <translation type="unfinished">Zgjidh të gjitha</translation>
+    </message>
+    <message>
+        <source>Detach from thread</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Mark messages</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Unthread messages</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Reply</source>
+        <translation type="unfinished">Përgjigju</translation>
+    </message>
+    <message>
+        <source>Reply to sender only.  Select Reply all from the menu if you want to reply to all recipients.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Reply all</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Forward</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Next Message</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Previous Message</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Next Unread Message</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Previous Unread Message</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Scroll Down</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Scroll Up</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Mark as Unread</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Mark as Important</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Mark as Not Important</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Message queued</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Message has been queued in outbox</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Message queuing failure</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Failed to queue message in outbox.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message numerus="yes">
+        <source>%n message(s)</source>
+        <comment>%1: number of messages</comment>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+        </translation>
+    </message>
+    <message>
+        <source>Sending</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Sending:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Pending updates</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>There are local updates pending synchronization, do you want to revert these changes?</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Cannot transmit</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Cannot retrieve</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Account configuration is incomplete.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Some messages could not be sent and have been left in the outbox. Verify that recipient addresses are well formed.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Cannot synchronize accounts because a synchronize operation is currently in progress</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Synchronize in progress</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>OK</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Cannot synchronize account because a synchronize operation is currently in progress</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Cannot retrieve message because a retrieval operation is currently in progress</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Retrieval in progress</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Cannot retrieve message portion because a retrieval operation is currently in progress</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Cannot retrieve message part because a retrieval operation is currently in progress</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Cannot retrieve message part without a valid message ID</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Invalid part location</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Cannot retrieve message part portion because a retrieval operation is currently in progress</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Send Failure</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Error sending %1: %2</source>
+        <comment>%1: message type, %2: error text</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Automatic Fetch Failure</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Retrieve Failure</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Error retrieving %1: %2</source>
+        <comment>%1: message type, %2: error text</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>message</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Transfer cancelled</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Storage Failure</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Unable to perform requested action %1</source>
+        <comment>%1: error text</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Message</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Cannot access %1. Either there is insufficient space, or another program is accessing the mailbox.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Access error</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Cannot delete</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Message transmission is in progress</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Delete</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Deleting</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message numerus="yes">
+        <source>Deleting %n message(s)</source>
+        <comment>%1: number of messages</comment>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+        </translation>
+    </message>
+    <message>
+        <source>Moving</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message numerus="yes">
+        <source>Moving %n message(s) to Trash</source>
+        <comment>%1: number of messages</comment>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+        </translation>
+    </message>
+    <message numerus="yes">
+        <source>Moving %n message(s)</source>
+        <comment>%1: number of messages</comment>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+        </translation>
+    </message>
+    <message>
+        <source>Copying</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message numerus="yes">
+        <source>Copying %n message(s)</source>
+        <comment>%1: number of messages</comment>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+        </translation>
+    </message>
+    <message>
+        <source>Whoops</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Cannot handle messages from multiple accounts...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Cannot move</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Cannot copy</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Can not copy partial message</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Restoring</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message numerus="yes">
+        <source>Restoring %n message(s)</source>
+        <comment>%1: number of messages</comment>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+        </translation>
+    </message>
+    <message>
+        <source>all messages in the trash</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Detach</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Are you sure you want to detach this message from its current thread?</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Synchronize %1</source>
+        <comment>%1:account name</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Exclude folder</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Include folder</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Are you sure you wish to delete the folder %1 and all its contents?</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>New Folder Name</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>The name of the new folder should be: </source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Rename folder %1 to: </source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>was edited externally</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&lt;qt&gt;You are currently editing a message:&lt;br&gt;%1&lt;/qt&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Messages conflict</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Yes</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>No</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Autosave failed</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&lt;qt&gt;Autosave failed:&lt;br&gt;%1&lt;/qt&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Error</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Cannot edit a message of this type.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Unable to enable notification</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>System tray was undetected</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>System tray doesn&apos;t support messages</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Message deleted</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Message cannot be downloaded, because it has been deleted from the server.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message numerus="yes">
+        <source>Delete message(s)</source>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+        </translation>
+    </message>
+    <message>
+        <source>Move to Trash</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message numerus="yes">
+        <source>Move message(s)...</source>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+        </translation>
+    </message>
+    <message numerus="yes">
+        <source>Copy message(s)...</source>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+        </translation>
+    </message>
+    <message numerus="yes">
+        <source>Restore message(s)</source>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+        </translation>
+    </message>
+    <message>
+        <source>Send Error</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>%1 cannot be sent, because no account has been configured to send with.</source>
+        <comment>%1=MMS/Email/TextMessage</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Cancel</source>
+        <translation type="unfinished">Anulo</translation>
+    </message>
+    <message>
+        <source>Thread messages</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>EmailComposerInterface</name>
+    <message>
+        <source>Select attachments</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Subject:</source>
+        <translation type="unfinished">Lidhje me:</translation>
+    </message>
+    <message>
+        <source>Forwarded content:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Attachments</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&lt;Message content on server&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Fwd</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Fw</source>
+        <comment>2 letter short version of Fwd for forward</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Re</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>EmailComposerPlugin</name>
+    <message>
+        <source>Email</source>
+        <translation type="unfinished">E-Maili</translation>
+    </message>
+</context>
+<context>
+    <name>EmailFolderModel</name>
+    <message>
+        <source>Folder</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Outbox</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Drafts</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Sent</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Junk</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Trash</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -662,9 +1646,74 @@ Would you like to use this instead?</source>
     </message>
 </context>
 <context>
+    <name>FolderModel</name>
+    <message numerus="yes">
+        <source> (%n new)</source>
+        <comment>%1 = number of new messages</comment>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+        </translation>
+    </message>
+    <message numerus="yes">
+        <source> (%n unsent)</source>
+        <comment>%1 = number of unsent messages</comment>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+        </translation>
+    </message>
+    <message numerus="yes">
+        <source> (%n unread)</source>
+        <comment>%1 = number of unread messages</comment>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+        </translation>
+    </message>
+</context>
+<context>
+    <name>FolderSelectorWidget</name>
+    <message>
+        <source>Local Search</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Remote Search</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Search only in:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Include sub folders</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>ForbiddenReply</name>
     <message>
         <source>Remote content is banned</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>GenericViewer</name>
+    <message>
+        <source>Plain text</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Display the message contents in Plain text format.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Rich text</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Display the message contents in Rich text format.</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -719,6 +1768,355 @@ Would you like to use this instead?</source>
     <message>
         <source>Edit identity</source>
         <translation>Modifiko Identitetin</translation>
+    </message>
+</context>
+<context>
+    <name>IdleProtocol</name>
+    <message>
+        <source>Idle Error occurred</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>ImageDisplay</name>
+    <message>
+        <source>Size to fit</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Default size</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Actual size</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Zoom to fit</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>ImagePickerMiddleware</name>
+    <message>
+        <source>Pick Image</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>ImagePickerScript</name>
+    <message>
+        <source>Pick Image</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>ImagePreview</name>
+    <message>
+        <source>Cancel</source>
+        <translation type="unfinished">Anulo</translation>
+    </message>
+    <message>
+        <source>Confirm</source>
+        <translation type="unfinished">Konfirmo</translation>
+    </message>
+</context>
+<context>
+    <name>ImageViewer</name>
+    <message>
+        <source>Pick Image</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>ImapClient</name>
+    <message>
+        <source>Cannot open connection without IMAP server configuration</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Checking capabilities</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Starting TLS</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Logging in idle connection</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Logging in</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Unable to read fetched data</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Unable to map fetched data</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Unable to update part body</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Unable to handle dataFetched without context</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Cannot send message; socket in use</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Logging out</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Unable to handle partHeaderFetched without context</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>ImapProtocol</name>
+    <message>
+        <source>Connection failed</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>ImapService</name>
+    <message>
+        <source>Account disabled</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Initiating push email</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>ImapService::Source</name>
+    <message>
+        <source>Account disabled</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>No account specified</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>No messages to retrieve</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>No message to retrieve</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>No part specified</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Invalid message specified</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>No minimum specified</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Could not delete messages</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>No messages to copy</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Invalid destination folder</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>No messages to move</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>No messages to flag</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>No flags to be applied</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Cannot create empty named folder</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Drafts</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Sent</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Junk</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Trash</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Deleting invalid folder</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Cannot rename to an empty folder</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Cannot rename an invalid folder</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Empty search provided</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>No messages to prepare</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Destination message failed to match source message</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Cannot move an invalid folder</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>ImapSettings</name>
+    <message>
+        <source>Form</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Username</source>
+        <translation type="unfinished">Emri i përdoruesit</translation>
+    </message>
+    <message>
+        <source>Password</source>
+        <translation type="unfinished">Fjalëkalimi</translation>
+    </message>
+    <message>
+        <source>Server</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Port</source>
+        <translation type="unfinished">Porti</translation>
+    </message>
+    <message>
+        <source>Encryption</source>
+        <translation type="unfinished">Kriptimi</translation>
+    </message>
+    <message>
+        <source>None</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>SSL</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>TLS</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Authentication</source>
+        <translation type="unfinished">Autentifikim</translation>
+    </message>
+    <message>
+        <source>Login</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Plain</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Cram MD5</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Remove deleted messages from server</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Download limit</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>K</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Prefer HTML content over Plain</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Interval</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>min</source>
+        <comment>short for minutes</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Disable when Roaming</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Base folder</source>
+        <translation type="unfinished">Skedari bazë</translation>
+    </message>
+    <message>
+        <source>...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Drafts folder</source>
+        <translation type="unfinished">Skedari i dosjeve</translation>
+    </message>
+    <message>
+        <source>Sent folder</source>
+        <translation type="unfinished">Skedari i dergimeve</translation>
+    </message>
+    <message>
+        <source>Trash folder</source>
+        <translation type="unfinished">Shporta</translation>
+    </message>
+    <message>
+        <source>Junk folder</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Push Enabled</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>InboxMessageSet</name>
+    <message>
+        <source>Inbox</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -927,8 +2325,8 @@ Would you like to use this instead?</source>
 <context>
     <name>MainUI</name>
     <message>
-        <source>Dekko Mail</source>
-        <translation>Dekko Maili</translation>
+        <source>SageteaMail Mail</source>
+        <translation>SageteaMail Maili</translation>
     </message>
 </context>
 <context>
@@ -1085,6 +2483,13 @@ Would you like to use this instead?</source>
     </message>
 </context>
 <context>
+    <name>MessageList</name>
+    <message>
+        <source>Get more messages</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>MessageListActionPopover</name>
     <message>
         <source>Mark as unread</source>
@@ -1202,6 +2607,17 @@ Would you like to use this instead?</source>
     </message>
     <message>
         <source>Undo</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>MessageUiBase</name>
+    <message>
+        <source>QtMail</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Search Results</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -1431,6 +2847,21 @@ Would you like to use this instead?</source>
     </message>
 </context>
 <context>
+    <name>NotificationTray</name>
+    <message>
+        <source>New message from: %1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>New messages</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Received %1 new messages</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>OutgoingServerGroup</name>
     <message>
         <source>Hostname</source>
@@ -1470,6 +2901,136 @@ Would you like to use this instead?</source>
     </message>
 </context>
 <context>
+    <name>PopClient</name>
+    <message>
+        <source>Cannot open connection without POP server configuration</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Inbox</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Connected</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Logging in</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Previewing</source>
+        <comment>Previewing &lt;no of messages&gt;</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Completing %1 / %2</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Removing old messages</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Removing message from server</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Logging out</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>PopService</name>
+    <message>
+        <source>Account disabled</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>PopService::Source</name>
+    <message>
+        <source>No account specified</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>No folders specified</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>No messages to retrieve</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>No messages to delete</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>PopSettings</name>
+    <message>
+        <source>Form</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Username</source>
+        <translation type="unfinished">Emri i përdoruesit</translation>
+    </message>
+    <message>
+        <source>Password</source>
+        <translation type="unfinished">Fjalëkalimi</translation>
+    </message>
+    <message>
+        <source>Server</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Port</source>
+        <translation type="unfinished">Porti</translation>
+    </message>
+    <message>
+        <source>Encryption</source>
+        <translation type="unfinished">Kriptimi</translation>
+    </message>
+    <message>
+        <source>None</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>SSL</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>TLS</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Remove deleted mail from server</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Skip larger</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Interval</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Disable when Roaming</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>min</source>
+        <comment>short for minutes</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>K</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>PrivacySettings</name>
     <message>
         <source>Message content</source>
@@ -1495,6 +3056,258 @@ Would you like to use this instead?</source>
     </message>
 </context>
 <context>
+    <name>PushFolderList</name>
+    <message>
+        <source>Push folder</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>...</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>QCoreApplication</name>
+    <message>
+        <source>Storage for messages is full. Some new messages could not be retrieved.</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>QMailMessageModelBase</name>
+    <message>
+        <source>Draft message</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message numerus="yes">
+        <source>%n byte(s)</source>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+        </translation>
+    </message>
+    <message>
+        <source>%1 KB</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>%1 MB</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>%1 GB</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Received</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Sent</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Last edited</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>QMailMessageService</name>
+    <message>
+        <source>Cancelled by user</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>IMAP</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>POP</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Mailfile</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>SMTP</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>QMailMessageSource</name>
+    <message>
+        <source>Unable to delete messages</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Insufficient space to copy messages to folder</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Unable to copy messages for account</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Unable to move messages to folder</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Unable to flag messages</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>QMailServiceAction</name>
+    <message>
+        <source>Connection refused</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Remote host closed the connection</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Host not found</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Permission denied</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Insufficient resources</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Operation timed out</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Datagram too large</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Network error</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Address in use</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Address not available</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Unsupported operation</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Unknown error</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>This function is not currently supported.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Framework error occurred.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Login failed - check user name and password.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Operation cancelled.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Mail check failed.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Message deleted from server.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Unable to queue message for transmission.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Cannot determine the connection to transmit message on.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Outgoing connection already in use by another operation.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Outgoing connection is not ready to transmit message.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Unable to use account due to invalid configuration.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Message origin or recipient addresses are not correctly formatted.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Configured service unable to handle supplied data.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Configured service failed to perform action within a reasonable period of time.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Unable to send; message moved to Drafts folder</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Unexpected response from server: </source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Error %1</source>
+        <comment>%1 contains numeric error code</comment>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>QMailStorePrivate</name>
+    <message>
+        <source>Local Storage</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>QMailTransport</name>
+    <message>
+        <source>DNS lookup</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Connected</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Connection timed out</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Error occurred</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Socket error</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>QObject</name>
     <message numerus="yes">
         <source>%n byte(s)</source>
@@ -1513,6 +3326,197 @@ Would you like to use this instead?</source>
     </message>
     <message>
         <source>%1 GB</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>File not open</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Could not create path</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Could not delete path</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>No error</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Lock failed error</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Permission error</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Unknown error</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Cannot create separate instance of Options</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Cannot create separate instance of Batch</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Cannot create separate instance of QueryBase</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Cannot create separate instance of Range</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Are you sure you want to delete: %1?</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Subject</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Addressee</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Date</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Size</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>This server does not provide a complete IMAP4rev1 implementation.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Completing %1 / %2</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Previewing</source>
+        <comment>Previewing &lt;number of messages&gt;</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Checking</source>
+        <comment>Checking &lt;mailbox name&gt;</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Retrieving folders</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Marking message as read</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Marking message as unread</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Marking message as important</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Marking message as unimportant</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Deleting message</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Scanning folders</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Scanning folder</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Copying %1 / %2</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Moving %1 / %2</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>QtopiamailfileSettings</name>
+    <message>
+        <source>Form</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Location</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>QuickSearchWidget</name>
+    <message>
+        <source>Any Status</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Unread</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Important</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>New</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Replied</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Forwarded</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Has Attachment</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Removed</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>ReadMail</name>
+    <message>
+        <source>Get message</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Retrieve this message from the server.  You can use this option to retrieve individual messages that would normally not be automatically downloaded.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Message</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>To:</source>
+        <translation type="unfinished">Tek:</translation>
+    </message>
+    <message>
+        <source>This view displays the contents of the message.</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -1573,6 +3577,251 @@ Would you like to use this instead?</source>
     </message>
 </context>
 <context>
+    <name>RowWidget</name>
+    <message>
+        <source>Acknowledging new messages</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Transmitting new messages</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Retrieving a list of folders</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Retrieving a list of message</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Retrieving messages</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Retrieving part of a message</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Retrieving a range of messages</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Retrieving parts of a messages</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Retrieving everything</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Exporting updates</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Synchronizing</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Copying messages</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Moving messages</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Flagging messages</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Creating a folder</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Renaming a folder</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Deleting a folder</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Canceling a transfer</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Deleteing a message</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Searching</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Cancelling search</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Listing actions</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Direct protocol request</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Unknown/handled request.</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>S:</name>
+    <message>
+        <source></source>
+        <comment>&apos;convergent&apos; describes the apps ability of being usable on desktop and mobile devices running different OS</comment>
+        <translation></translation>
+    </message>
+</context>
+<context>
+    <name>SaveContactDialog</name>
+    <message>
+        <source>Create new contact</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Add to existing</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Save</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Saving &apos;%1&apos; to Contacts.</source>
+        <comment>%1=name/address/number</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Create new contact or add to an existing contact?</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>SearchViewBase</name>
+    <message>
+        <source>Search</source>
+        <translation type="unfinished">Kërko</translation>
+    </message>
+    <message>
+        <source>In</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Select the mailbox to search for mail in.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Any</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Inbox</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Outbox</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Drafts</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Sent</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Trash</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Status</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Find mail with a matching flag.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Read</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Unread</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Replied</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Removed</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>From</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Input text that must occur in the from field.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>To</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Input text that must occur in the to field.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Subject</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Input text that must occur in the subject.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Body</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Include only mails after this date.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>After</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Include only mails before this date.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Before</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>SelectFolderDialog</name>
+    <message>
+        <source>Select folder</source>
+        <translation type="unfinished">Zgjidh Skedarin</translation>
+    </message>
+</context>
+<context>
     <name>SenderIdentityField</name>
     <message>
         <source>From:</source>
@@ -1604,6 +3853,13 @@ Would you like to use this instead?</source>
     <message>
         <source>Allow untrusted certificates</source>
         <translation>Lejo Çertifikatë të pasigurtë</translation>
+    </message>
+</context>
+<context>
+    <name>ServerObserver</name>
+    <message>
+        <source>Server Observer</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -1764,6 +4020,10 @@ Would you like to use this instead?</source>
         <source>Failed to perform requested action!</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>Unable to move invalid folder</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>Settings</name>
@@ -1775,8 +4035,8 @@ Would you like to use this instead?</source>
 <context>
     <name>SettingsWindow</name>
     <message>
-        <source>Dekko Settings</source>
-        <translation>Konfigurimi i Dekko</translation>
+        <source>SageteaMail Settings</source>
+        <translation>Konfigurimi i SageteaMail</translation>
     </message>
 </context>
 <context>
@@ -1791,6 +4051,13 @@ Would you like to use this instead?</source>
     <message>
         <source>Mail Setup Wizard</source>
         <translation>Asistenti i Konfigurimit të E-Mail</translation>
+    </message>
+</context>
+<context>
+    <name>SigEntry</name>
+    <message>
+        <source>Signature</source>
+        <translation type="unfinished">Signatura</translation>
     </message>
 </context>
 <context>
@@ -1810,7 +4077,120 @@ Would you like to use this instead?</source>
 <context>
     <name>SmtpAccountConfiguration</name>
     <message>
-        <source>Sent using Dekko from my Ubuntu device</source>
+        <source>Sent with SageteaMail</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>SmtpClient</name>
+    <message>
+        <source>Cannot send message; transport in use</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Cannot send message without account configuration</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Cannot send message without SMTP server configuration</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Connected</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Sending: %1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Received response 354 while sending.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message numerus="yes">
+        <source>Sent %n messages</source>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+        </translation>
+    </message>
+    <message>
+        <source>Have not received any greeting from SMTP server, probably configuration error</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>SmtpSettings</name>
+    <message>
+        <source>Form</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>From</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Email</source>
+        <translation type="unfinished">E-Maili</translation>
+    </message>
+    <message>
+        <source>Server</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Port</source>
+        <translation type="unfinished">Porti</translation>
+    </message>
+    <message>
+        <source>Encryption</source>
+        <translation type="unfinished">Kriptimi</translation>
+    </message>
+    <message>
+        <source>None</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>SSL</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>TLS</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Authentication</source>
+        <translation type="unfinished">Autentifikim</translation>
+    </message>
+    <message>
+        <source>Login</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Plain</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Cram MD5</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Username</source>
+        <translation type="unfinished">Emri i përdoruesit</translation>
+    </message>
+    <message>
+        <source>Password</source>
+        <translation type="unfinished">Fjalëkalimi</translation>
+    </message>
+    <message>
+        <source>Signature</source>
+        <translation type="unfinished">Signatura</translation>
+    </message>
+    <message>
+        <source>Set...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Default sending account</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -1826,6 +4206,13 @@ Would you like to use this instead?</source>
     <message>
         <source>Synchronizing account.</source>
         <translation>Llogaria e përdoruesit sinkronizohet.</translation>
+    </message>
+</context>
+<context>
+    <name>TextDisplay</name>
+    <message>
+        <source>Wrap text</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -1916,6 +4303,113 @@ Would you like to use this instead?</source>
     </message>
     <message>
         <source>Message sending failed</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>WriteMail</name>
+    <message>
+        <source>Close</source>
+        <translation type="unfinished">Mbyllë</translation>
+    </message>
+    <message>
+        <source>Save in drafts</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Save this message as a draft.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Send</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Send the message.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Compose</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Large attachments</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>The message has large attachments. Send now?</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Message saved</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>The message has been saved in the Drafts folder</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Empty message</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>The message is currently empty. Do you wish to send an empty message?</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Incomplete message</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>The message cannot be sent until at least one recipient has been entered.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Save to drafts</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Do you wish to save the message to drafts?</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Compose new message</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>A message is currently being composed. Do you wish to save the message in drafts?</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>No accounts configured</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>No accounts are configured to send messages with. Do you wish to configure one now?</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Select type</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>(Unnamed)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>No accounts are configured to send %1.
+Do you wish to configure one now?</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>tst_QLogSystem</name>
+    <message>
+        <source>Now You should see the string</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>at syslog output LOG_LOCAL7, LOG_INFO</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

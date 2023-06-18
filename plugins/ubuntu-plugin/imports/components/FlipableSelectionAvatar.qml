@@ -1,7 +1,6 @@
 /* Copyright (C) 2016 - 2017 Dan Chapman <dpniel@ubuntu.com>
-   Copyright (C) 2022 - 2023 Rúben Carneiro <rubencarneiro01@gmail.com>
 
-   This file is part of SageTea Mail, email client for Ubuntu devices
+   This file is part of Dekko email client for Ubuntu devices
 
    This program is free software; you can redistribute it and/or
    modify it under the terms of the GNU General Public License as
@@ -19,12 +18,12 @@
 import QtQuick 2.4
 import QtQuick.Controls.Suru 2.2
 import QtFeedback 5.0
-import Ubuntu.Components 1.3
+import Lomiri.Components 1.3
 import SageteaMail.Components 1.0
 import SageteaMail.Mail.API 1.0
 import SageteaMail.Mail.Stores.Mail 1.0
 import "./private/UiUtils.js" as UiUtils
-import SageteaMail.Ubuntu.Constants 1.0
+import SageteaMail.Lomiri.Constants 1.0
 
 Flipable {
     id: flipable
@@ -37,11 +36,11 @@ Flipable {
         anchors.fill: parent
         Component {
             id: component_inner_av
-            UbuntuShape {
+            LomiriShape {
                 id: avatarCircle
                 anchors.fill: parent
                 anchors.centerIn: parent
-                aspect: UbuntuShape.Flat
+                aspect: LomiriShape.Flat
                 backgroundColor: msg ? UiUtils.getIconColor(msg.from.name) : "transparent"
                 opacity: ma.containsMouse ? 0.8 : 1.0
 
@@ -69,7 +68,7 @@ Flipable {
             active: !inner_name.visible
             sourceComponent: component_inner_av
         }
-        UbuntuShapeGravatar {
+        LomiriShapeGravatar {
             id: inner_name
             emailAddress: msg ? msg.from.address : ""
             clip: true
@@ -103,11 +102,11 @@ Flipable {
             }
         }
 
-        UbuntuShape {
+        LomiriShape {
             id: avatarSearchOverlay
             anchors.fill: parent
             anchors.centerIn: parent
-            aspect: UbuntuShape.Flat
+            aspect: LomiriShape.Flat
             backgroundColor: Suru.secondaryForegroundColor
             opacity: 0.8
             visible: false
@@ -182,7 +181,7 @@ Flipable {
                     }
                 }
             }
-            NumberAnimation { target: rotation; property: "angle"; duration: UbuntuAnimation.FastDuration }
+            NumberAnimation { target: rotation; property: "angle"; duration: LomiriAnimation.FastDuration }
         }
     }
     

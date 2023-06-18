@@ -86,7 +86,7 @@ Q_DECL_EXPORT int main(int argc, char** argv)
     QCoreApplication app(argc, argv);
 #endif
 
-    // This is ~/.config/dekko.dekkoproject/dekkod.conf
+    // This is ~/.config/dekko.dekkoproject/sageteamaild.conf
     qMailLoggersRecreate(APP_NAME, "sageteamaild", "Msgsrv");
 
     if(QMail::fileLock("sageteamaild-instance.lock") == -1)

@@ -1,4 +1,4 @@
-SageTea Mail includes an developer wiki included in the source.
+Dekko includes an developer wiki included in the source.
 
 From the root of the source directory run
 

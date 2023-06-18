@@ -1,4 +1,4 @@
-module SageteaMail.Ubuntu.Dialogs
+module SageteaMail.Lomiri.Dialogs
 
 ConfirmationDialog 1.0 ConfirmationDialog.qml
 ContentPickerDialog 1.0 ContentPickerDialog.qml

@@ -2,7 +2,7 @@
 <application>
     <services>
         <service id="sageteamail.sagetea_sageteamail">
-            <description>Sync your e-mail with Sagetea Mail</description>
+            <description>Sync your e-mail with sageteamail</description>
         </service>
     </services>
 </application>

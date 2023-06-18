@@ -35,6 +35,6 @@ Product {
         condition: project.ui === "ubuntu"
         fileTagsFilter: "utils-plugin"
         qbs.install: project.ui === "ubuntu"
-        qbs.installDir: project.qmlDir + "/SageteaMail/Ubuntu/Helpers"
+        qbs.installDir: project.qmlDir + "/SageteaMail/Lomiri/Helpers"
     }
 }

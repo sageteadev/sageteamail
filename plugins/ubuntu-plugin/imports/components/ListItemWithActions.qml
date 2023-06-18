@@ -17,10 +17,10 @@
 import QtQuick 2.4
 import QtQuick.Controls.Suru 2.2
 import QtFeedback 5.0
-import Ubuntu.Components 1.3
-import Ubuntu.Components.ListItems 1.0 as ListItem
+import Lomiri.Components 1.3
+import Lomiri.Components.ListItems 1.0 as ListItem
 import SageteaMail.Components 1.0
-import SageteaMail.Ubuntu.Constants 1.0
+import SageteaMail.Lomiri.Constants 1.0
 
 PixelPerfectItem {
     id: root
@@ -236,7 +236,7 @@ PixelPerfectItem {
                        height: units.gu(3)
                        source: modelData.iconSource ? modelData.iconSource : null
                        name: modelData.iconName ? modelData.iconName : ""
-                       color: root.activeAction === modelData || !root.triggerActionOnMouseRelease ?  UbuntuColors.orange : Suru.tertiaryForegroundColor
+                       color: root.activeAction === modelData || !root.triggerActionOnMouseRelease ?  LomiriColors.orange : Suru.tertiaryForegroundColor
                    }
                    Rectangle {
                        id: underscore
@@ -248,7 +248,7 @@ PixelPerfectItem {
 
                        }
                        // Both this and the action icon should match the header color when active
-                       color: UbuntuColors.orange 
+                       color: LomiriColors.orange 
                        visible: root.activeAction === modelData && root.showActionHighlight
                        onVisibleChanged: {
                            if (visible) {
@@ -283,7 +283,7 @@ PixelPerfectItem {
             visible: (status === Loader.Ready) && (item.width === item.implicitWidth)
             Behavior on width {
                 NumberAnimation {
-                    duration: UbuntuAnimation.SnapDuration
+                    duration: LomiriAnimation.SnapDuration
                 }
             }
         }
@@ -294,11 +294,11 @@ PixelPerfectItem {
         }
 
         Behavior on x {
-            UbuntuNumberAnimation {
+            LomiriNumberAnimation {
                 id: mainItemMoving
 
                 easing.type: Easing.OutElastic
-                duration: UbuntuAnimation.SlowDuration
+                duration: LomiriAnimation.SlowDuration
             }
         }
     }
@@ -310,20 +310,20 @@ PixelPerfectItem {
 
         running: false
         ParallelAnimation {
-            UbuntuNumberAnimation {
+            LomiriNumberAnimation {
                 target: triggerAction.currentItem
                 property: "opacity"
                 from: 1.0
                 to: 0.0
-                duration: UbuntuAnimation.SlowDuration
+                duration: LomiriAnimation.SlowDuration
                 easing {type: Easing.InOutBack; }
             }
-            UbuntuNumberAnimation {
+            LomiriNumberAnimation {
                 target: triggerAction.currentItem
                 properties: "width, height"
                 from: units.gu(3)
                 to: root.actionWidth
-                duration: UbuntuAnimation.SlowDuration
+                duration: LomiriAnimation.SlowDuration
                 easing {type: Easing.InOutBack; }
             }
         }
@@ -346,7 +346,7 @@ PixelPerfectItem {
         PauseAnimation {
             duration: 500
         }
-        UbuntuNumberAnimation {
+        LomiriNumberAnimation {
             target: main
             property: "x"
             to: 0

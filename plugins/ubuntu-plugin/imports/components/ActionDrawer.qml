@@ -18,8 +18,8 @@
 import QtQuick 2.4
 import QtQuick.Layouts 1.1
 import QtQuick.Controls.Suru 2.2
-import Ubuntu.Components 1.3
-import SageteaMail.Ubuntu.Constants 1.0
+import Lomiri.Components 1.3
+import SageteaMail.Lomiri.Constants 1.0
 
 Item {
     id: actionsDrawer
@@ -89,7 +89,7 @@ Item {
             right: parent.right
         }
         y: actionsDrawer.opened ? 0 : -height
-        Behavior on y { UbuntuNumberAnimation {} }
+        Behavior on y { LomiriNumberAnimation {} }
 
         onYChanged: {
             if (y == -height)

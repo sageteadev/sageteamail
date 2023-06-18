@@ -29,7 +29,7 @@ package "[[https://gitlab.com/dekkan/dekko/-/tree/master/Dekko/workers src://Dek
     class "[[https://gitlab.com/dekkan/dekko/-/tree/master/Dekko/workers/UriWorker.qml UriWorker.qml]]" as uriworker {
     }
 
-    class "ViewWorker\n[[https://gitlab.com/dekkan/dekko/-/tree/master/Dekko/app/Dekko.qml Dekko.qml]]" as viewworker {
+    class "ViewWorker\n[[https://gitlab.com/dekkan/dekko/-/tree/master/Dekko/app/SageteaMail.qml SageteaMail.qml]]" as viewworker {
     }
 
     accountsworker *-- workerregistry

@@ -24,7 +24,7 @@ class QVariant;
 QT_END_NAMESPACE
 
 /*
- * Adaptor class for interface org.sagetea.AccountService
+ * Adaptor class for interface org.dekkoproject.AccountService
  */
 class AccountServiceAdaptor: public QDBusAbstractAdaptor
 {

@@ -35,7 +35,7 @@
 #define MEDIUM_FF_WDTH 800
 #define LARGE_FF_WIDTH 1100
 
-Q_LOGGING_CATEGORY(SAGETEAMAIL_MAIN, "sagteamail.main")
+Q_LOGGING_CATEGORY(SAGETEAMAIL_MAIN, "sageteamail.main")
 
 SageteaMail::SageteaMail(int &argc, char **argv) :
     QApplication(argc, argv),
@@ -147,7 +147,7 @@ bool SageteaMail::setup()
 
     devMode = parser.isSet("d");
 
-    m_engine.rootContext()->setContextProperty("SageteaMailapp", this);
+    m_engine.rootContext()->setContextProperty("sageteamailapp", this);
     m_engine.rootContext()->setContextProperty("service", m_serviceRegistry);
     m_engine.rootContext()->setContextProperty("devModeEnabled", QVariant(devMode));
     m_engine.rootContext()->setContextProperty("verboseLogging", QVariant(m_verboseLogging));
@@ -162,7 +162,7 @@ bool SageteaMail::setup()
     }
     uris.removeDuplicates();
     m_engine.rootContext()->setContextProperty(QStringLiteral("appUris"), uris);
-    m_engine.load(QUrl("qrc:/qml/Dekko.qml"));
+    m_engine.load(QUrl("qrc:/qml/SageteaMail.qml"));
     return true;
 }
 

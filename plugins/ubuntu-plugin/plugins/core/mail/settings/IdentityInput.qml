@@ -1,13 +1,13 @@
 import QtQuick 2.4
-import Ubuntu.Components 1.3
+import Lomiri.Components 1.3
 import QtQuick.Controls.Suru 2.2
 // FIXME: These are most likely going to be deprecated soon
-import Ubuntu.Components.ListItems 1.0 as CanWeStillUseThis
+import Lomiri.Components.ListItems 1.0 as CanWeStillUseThis
 import SageteaMail.Mail.API 1.0
 import SageteaMail.Mail.Stores.Accounts 1.0
 import SageteaMail.Mail.Stores.Settings 1.0
 import QuickFlux 1.0
-import SageteaMail.Ubuntu.Components 1.0
+import SageteaMail.Lomiri.Components 1.0
 
 PageFlickable {
     id: input

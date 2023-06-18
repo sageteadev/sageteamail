@@ -1,5 +1,5 @@
 import QtQuick 2.4
-import Ubuntu.Components 1.3
+import Lomiri.Components 1.3
 import Plugins 0.1
 
 MainView {
@@ -46,7 +46,7 @@ MainView {
             Rectangle {
                 width: units.gu(40)
                 height: width
-                color: UbuntuColors.red
+                color: LomiriColors.red
                 Timer {
                     interval: 1000
                     triggeredOnStart: true
@@ -67,7 +67,7 @@ MainView {
         }
 
         Rectangle {
-            color: UbuntuColors.porcelain
+            color: LomiriColors.porcelain
             anchors.centerIn: parent
             height: units.gu(50)
             width: height

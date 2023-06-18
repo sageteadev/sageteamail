@@ -1,8 +1,8 @@
 import QtQuick 2.4
-import Ubuntu.Components 1.3
+import Lomiri.Components 1.3
 import SageteaMail.Mail.API 1.0
 import PlugMan 1.0
-import SageteaMail.Ubuntu.Components 1.0
+import SageteaMail.Lomiri.Components 1.0
 
 DekkoPage {
     id: sp
@@ -52,7 +52,7 @@ DekkoPage {
                 onTriggered: SettingsActions.openSettingsGroup(
                                  Qt.resolvedUrl("./PrivacySettingsPage.qml")
                              )
-            },
+            }
         ]
     }
 

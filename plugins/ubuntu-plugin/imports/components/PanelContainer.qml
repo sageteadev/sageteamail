@@ -1,7 +1,6 @@
 /* Copyright (C) 2016 - 2017 Dan Chapman <dpniel@ubuntu.com>
-   Copyright (C) 2022 - 2023 Rúben Carneiro <rubencarneiro01@gmail.com>
 
-   This file is part of SageTea Mail, email client for Ubuntu devices
+   This file is part of Dekko email client for Ubuntu devices
 
    This program is free software; you can redistribute it and/or
    modify it under the terms of the GNU General Public License as
@@ -18,9 +17,9 @@
 */
 import QtQuick 2.4
 import QtQuick.Window 2.2
-import Ubuntu.Components 1.3
+import Lomiri.Components 1.3
 import SageteaMail.Components 1.0
-import SageteaMail.Ubuntu.Constants 1.0
+import SageteaMail.Lomiri.Constants 1.0
 
 Item {
     id: panel
@@ -43,7 +42,7 @@ Item {
     // You only really want to set this to true if this panel is the main page container
     // for mobile / small form factor devices.
     property bool stretchOnSmallFF: false
-    property var viewState: dekko ? dekko : undefined
+    property var viewState: sageteamail ? sageteamail : undefined
     readonly property bool expanded: !d.collapsed
     default property alias content: internal.data
     property alias contentItem: internal
@@ -106,7 +105,7 @@ Item {
             opacity: 0.7
             width: units.gu(0.5)
             gradient: Gradient {
-                GradientStop { position: 0.0; color: UbuntuColors.blue }
+                GradientStop { position: 0.0; color: LomiriColors.blue }
                 GradientStop { position: 1.0; color: "transparent" }
             }
         }

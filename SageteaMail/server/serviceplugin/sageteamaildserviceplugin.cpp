@@ -10,7 +10,7 @@
 SageteaMaildService::SageteaMaildService(QObject *parent): ServicePlugin(parent)
 {
     m_service = QStringLiteral("sageteamaild");
-    m_serviceFile = QString("%1/.config/upstart/%2.conf").arg(QDir::homePath(), m_service);
+    m_serviceFile = QString("%1/.config/systemd/user/%2.service").arg(QDir::homePath(), m_service);
 }
 
 QString SageteaMaildService::pluginId() const
@@ -66,6 +66,13 @@ bool SageteaMaildService::serviceFileInstalled() const
 bool SageteaMaildService::installServiceFile() const
 {
     QFile f(m_serviceFile);
+    QDir parent = QFileInfo(f).dir();
+
+    if (!parent.mkpath(".")) {
+        qDebug() << "[SageteaMaildService] Cannot create systemd user service directory";
+        return false;
+    }
+
     if (!f.open(QFile::WriteOnly | QFile::Truncate)) {
         qDebug() << "[SageteaMaildService] Cannot create service file";
         return false;
@@ -73,22 +80,36 @@ bool SageteaMaildService::installServiceFile() const
 
     QString appDir = QCoreApplication::applicationDirPath();
     appDir.replace(QRegExp("sageteamail2.sagetea/[^/]+/"), "sageteamail2.sagetea/current/");
-    f.write("start on started unity8\n");
-    f.write("pre-start script\n");
-    f.write("   initctl set-env LD_LIBRARY_PATH=" + appDir.toUtf8() + "/../:$LD_LIBRARY_PATH\n");
-    f.write("   initctl set-env SAGETEAMAIL_PLUGINS=" + appDir.toUtf8() + "/../SageteaMail/plugins\n");
-    f.write("   initctl set-env QMF_PLUGINS=" + appDir.toUtf8() + "/../qmf/plugins5\n");
-    f.write("   initctl set-env QMF_DATA=$HOME/.cache/sageteamail2.sagetea\n");
-    f.write("end script\n");
-    f.write("exec " + appDir.toUtf8() + "/" + m_service.toUtf8() + "\n");
+
+    f.write("[Unit]\n");
+    f.write("Description=SageteaMaild Service\n");
+
+    f.write("\n[Service]\n");
+    f.write("ExecStart=" + appDir.toUtf8() + "/" + m_service.toUtf8() + "\n");
+    f.write("WorkingDirectory=" + appDir.toUtf8() + "\n");
+    f.write("Environment=\"LD_LIBRARY_PATH=" + appDir.toUtf8() + "/../:$LD_LIBRARY_PATH\"\n");
+    f.write("Environment=\"SAGETEAMAIL_PLUGINS=" + appDir.toUtf8() + "/../SageteaMail/plugins\"\n");
+    f.write("Environment=\"QMF_PLUGINS=" + appDir.toUtf8() + "/../qmf/plugins5\"\n");
+    f.write("Environment=\"QMF_DATA=" + QDir::homePath().toUtf8() + "/.cache/sageteamail2.sagetea\"\n");
+    f.write("Restart=on-failure\n");
+
+    f.write("\n[Install]\n");
+    f.write("WantedBy=graphical-session.target\n");
+    
     f.close();
-    return true;
+
+    qDebug() << "[SageteaMaildService] should enable service";
+    int ret1 = QProcess::execute("systemctl", {"--user", "daemon-reload"});
+    int ret2 = QProcess::execute("systemctl", {"--user", "enable", m_service});
+
+    return ret1 == 0 && ret2 == 0;
 }
 
 bool SageteaMaildService::removeServiceFile() const
 {
     if (serviceFileInstalled()) {
-        return QFile(m_serviceFile).remove();
+        int ret = QProcess::execute("systemctl", {"--user", "disable", "--now", m_service});
+        return QFile(m_serviceFile).remove() && ret == 0;
     }
     return true;
 }
@@ -96,31 +117,31 @@ bool SageteaMaildService::removeServiceFile() const
 bool SageteaMaildService::serviceRunning() const
 {
     QProcess p;
-    p.start("initctl", {"status", m_service});
+    p.start("systemctl", {"--user", "status", m_service});
     p.waitForFinished();
     QByteArray output = p.readAll();
     qDebug() << output;
-    return output.contains("running");
+    return output.contains("active (running)");
 }
 
 bool SageteaMaildService::startService()
 {
     qDebug() << "[SageteaMaildService] should start service";
-    int ret = QProcess::execute("start", {m_service});
+    int ret = QProcess::execute("systemctl", {"--user", "start", m_service});
     return ret == 0;
 }
 
 bool SageteaMaildService::restartService()
 {
     qDebug() << "[SageteaMaildService] should restart service";
-    int ret = QProcess::execute("restart", {m_service});
+    int ret = QProcess::execute("systemctl", {"--user", "restart", m_service});
     return ret == 0;
 }
 
 bool SageteaMaildService::stopService()
 {
     qDebug() << "[SageteaMaildService] should stop service";
-    int ret = QProcess::execute("stop", {m_service});
+    int ret = QProcess::execute("systemctl", {"--user", "stop", m_service});
     return ret == 0;
 }
 
@@ -135,7 +156,7 @@ bool SageteaMaildService::newVersion()
         return serviceRunning();
     }
 
-    // We also want to support downgrades so just check the version doesn't match DEKKO_VERSION
+    // We also want to support downgrades so just check the version doesn't match SAGETEAMAIL_VERSION
     const bool result = settings.value(QStringLiteral("version")).toString() != QStringLiteral(SAGETEAMAIL_VERSION);
     if (result) {
         settings.setValue(QStringLiteral("version"), QStringLiteral(SAGETEAMAIL_VERSION));
@@ -149,19 +170,17 @@ QVariantMap SageteaMaildService::documentation() const
     return QVariantMap();
 }
 
-QString SageteaMaildServicePlugin::name() const
+QString SageteaMailServicePlugin::name() const
 {
     return QStringLiteral("sageteamaild-service");
 }
 
-QString SageteaMaildServicePlugin::description() const
+QString SageteaMailServicePlugin::description() const
 {
-    return QStringLiteral("SageteaMail's messaging server");
+    return QStringLiteral("SageteaMail messaging server");
 }
 
-PluginInfo *SageteaMaildServicePlugin::create(QObject *parent) const
+PluginInfo *SageteaMailServicePlugin::create(QObject *parent) const
 {
     return new SageteaMaildService(parent);
 }
-
-

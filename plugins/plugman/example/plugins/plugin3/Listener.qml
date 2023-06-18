@@ -1,9 +1,9 @@
 import QtQuick 2.4
-import Ubuntu.Components 1.3
+import Lomiri.Components 1.3
 Rectangle {
     width: units.gu(40)
     height: width
-    color: UbuntuColors.red
+    color: LomiriColors.red
     Timer {
         interval: 500
         triggeredOnStart: true

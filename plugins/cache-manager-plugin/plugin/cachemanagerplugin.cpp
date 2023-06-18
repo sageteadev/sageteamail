@@ -217,7 +217,7 @@ QString CacheManagerPlugin::name() const
 
 QString CacheManagerPlugin::description() const
 {
-    return QStringLiteral("Sagetea Mail cache manager");
+    return QStringLiteral("SageteaMail cache manager");
 }
 
 PluginInfo *CacheManagerPlugin::create(QObject *parent) const

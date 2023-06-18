@@ -1,7 +1,6 @@
 /* Copyright (C) 2016 - 2017 Dan Chapman <dpniel@ubuntu.com>
-   Copyright (C) 2022 - 2023 Rúben Carneiro <rubencarneiro01@gmail.com>
 
-   This file is part of SageTea Mail, email client for Ubuntu devices
+   This file is part of Dekko email client for Ubuntu devices
 
    This program is free software; you can redistribute it and/or
    modify it under the terms of the GNU General Public License as
@@ -17,14 +16,14 @@
    along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 import QtQuick 2.4
-import Ubuntu.Components 1.3
-import Ubuntu.Components.Popups 1.3
+import Lomiri.Components 1.3
+import Lomiri.Components.Popups 1.3
 import SageteaMail.Components 1.0
 import SageteaMail.Mail 1.0
 import SageteaMail.Mail.API 1.0
 import SageteaMail.Mail.Settings 1.0
-import SageteaMail.Ubuntu.Components 1.0
-import SageteaMail.Ubuntu.Constants 1.0
+import SageteaMail.Lomiri.Components 1.0
+import SageteaMail.Lomiri.Constants 1.0
 import "../utils/UiUtils.js" as UiUtils
 
 ListItem {
@@ -46,7 +45,7 @@ ListItem {
         subtitle.elide: Text.ElideRight
         subtitle.wrapMode: Text.NoWrap
         summary.text: detailsVisible ? qsTr("Hide details") : qsTr("View details")
-        summary.color: UbuntuColors.blue
+        summary.color: LomiriColors.blue
         // Hack to reparent the mousearea to the summary label.
         // so we can make it clickable.
         Component.onCompleted: ma.parent = defaultLayout.summary
@@ -97,7 +96,7 @@ ListItem {
                 }
                 height: units.gu(6)
                 width: units.gu(4)
-                iconColor: UbuntuColors.ash
+                iconColor: LomiriColors.ash
                 action: Action {
                     iconSource: Paths.actionIconUrl(Icons.ContextMenuIcon)
                     onTriggered: PopupUtils.open(Qt.resolvedUrl("../popovers/MessageActionPopover.qml"), ctxt, {msg: msg})
@@ -113,7 +112,7 @@ ListItem {
                 }
                 height: units.gu(6)
                 width: units.gu(4)
-                iconColor: UbuntuColors.ash
+                iconColor: LomiriColors.ash
                 action: Action {
                     iconSource: Paths.actionIconUrl(Icons.MailReplyIcon)
                     onTriggered: ComposerActions.respondToMessage(msg.isListPost ? SubmissionManager.ReplyList : SubmissionManager.Reply, msg.messageId)

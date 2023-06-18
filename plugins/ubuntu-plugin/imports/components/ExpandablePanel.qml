@@ -1,8 +1,8 @@
 import QtQuick 2.4
 import QtQuick.Controls.Suru 2.2
-import Ubuntu.Components 1.3
+import Lomiri.Components 1.3
 import SageteaMail.Components 1.0
-import SageteaMail.Ubuntu.Constants 1.0
+import SageteaMail.Lomiri.Constants 1.0
 
 Rectangle {
     id: expandingPanel
@@ -63,7 +63,7 @@ Rectangle {
             text: qsTr("Attachments")
         }
 
-        UbuntuShape {
+        LomiriShape {
             id: shape
             anchors {
                 left: l.right
@@ -72,7 +72,7 @@ Rectangle {
             }
             visible: countLable.text
 
-            aspect: UbuntuShape.Flat
+            aspect: LomiriShape.Flat
             color: Suru.secondaryBackgroundColor
             height: units.gu(2.2)
             width: countLable.width < height ? height : countLable.width + Style.smallSpacing
@@ -92,7 +92,7 @@ Rectangle {
                 rightMargin: Style.defaultSpacing
                 verticalCenter: parent.verticalCenter
             }
-            color: UbuntuColors.ash
+            color: LomiriColors.ash
             rotation: expandingPanel.expanded ? 180 : 0
             height: Style.defaultSpacing; width: height
             state: expandingPanel.expanded ? "rotated" : "normal"
@@ -108,7 +108,7 @@ Rectangle {
             ]
             transitions: Transition {
                 RotationAnimation {
-                    duration: UbuntuAnimation.FastDuration
+                    duration: LomiriAnimation.FastDuration
                     direction: icon.state === "normal"  ? RotationAnimation.Clockwise : RotationAnimation.Counterclockwise
                 }
             }
@@ -141,7 +141,7 @@ Rectangle {
     }
 
     Behavior on height {
-        UbuntuNumberAnimation{}
+        LomiriNumberAnimation{}
     }
 
     state: d.isExpanded ? "expanded" : "collapsed"

@@ -49,7 +49,7 @@ class SettingsObjectBase : public QObject
      *
      * @code
      * import QtQuick 2.4
-     * import Dekko.Settings 1.0
+     * import SageteaMail.Settings 1.0
      *
      * Item {
      *     property string labelVal: settings.data.label.value

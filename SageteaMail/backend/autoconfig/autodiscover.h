@@ -42,7 +42,7 @@ public:
         REQUEST_AUTOCONFIG_V11, // tbird v1.1
         REQUEST_AUTOCONFIG_WELLKNOWN_V12, // dekko v1.2
         REQUEST_AUTOCONFIG_WELLKNOWN_V11, // tbird v1.1
-        REQUEST_SAGETEAMAIL_ISPDB, // autoconfig.dekkoproject.org
+        REQUEST_DEKKO_ISPDB, // autoconfig.dekkoproject.org
         REQUEST_AUTOCONFIG_ISPDB, // autoconfig.thunderbird.net
 //        REQUEST_SRV,
 //        REQUEST_WEBFINGER, // Is this possible?? it should be!

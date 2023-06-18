@@ -1,4 +1,4 @@
-module SageteaMail.Ubuntu.Components
+module SageteaMail.Lomiri.Components
 ActionDrawer 1.0 ActionDrawer.qml
 Avatar 1.0 Avatar.qml
 CachedImage 1.0 CachedImage.qml
@@ -27,6 +27,6 @@ SectionHeader 1.0 SectionHeader.qml
 TabBar 1.0 TabBar.qml
 TitledHeaderButton 1.0 TitledHeaderButton.qml
 TitledTextField 1.0 TitledTextField.qml
-UbuntuShapeGravatar 1.0 UbuntuShapeGravatar.qml
+LomiriShapeGravatar 1.0 LomiriShapeGravatar.qml
 NavPluginSideBar 1.0 NavPluginSideBar.qml
 NavPluginModel 1.0 NavPluginModel.qml

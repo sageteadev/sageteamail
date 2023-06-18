@@ -1,7 +1,6 @@
 /* Copyright (C) 2016 - 2017 Dan Chapman <dpniel@ubuntu.com>
-   Copyright (C) 2022 - 2023 Rúben Carneiro <rubencarneiro01@gmail.com>
 
-   This file is part of SageTea Mail, email client for Ubuntu devices
+   This file is part of Dekko email client for Ubuntu devices
 
    This program is free software; you can redistribute it and/or
    modify it under the terms of the GNU General Public License as
@@ -17,13 +16,13 @@
    along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 import QtQuick 2.4
-import Ubuntu.Components 1.3
+import Lomiri.Components 1.3
 import QtWebEngine 1.5 
 import SageteaMail.Mail 1.0
 import SageteaMail.Components 1.0
-import SageteaMail.Ubuntu.Components 1.0
+import SageteaMail.Lomiri.Components 1.0
 import "../../webview"
-import SageteaMail.Ubuntu.Constants 1.0
+import SageteaMail.Lomiri.Constants 1.0
 
 DekkoPage {
 
@@ -58,16 +57,16 @@ DekkoPage {
                         left: parent.left
                         right: starIcon.left
                     }
-                    spacing: dekko.isSmallFF ? 0 : Style.smallSpacing
+                    spacing: sageteamail.isSmallFF ? 0 : Style.smallSpacing
 
                     AbstractButton {
                         id: backBtn
                         height: parent.height
-                        width: dekko.isSmallFF ? Style.largeSpacing : 0
+                        width: sageteamail.isSmallFF ? Style.largeSpacing : 0
                         Icon {
                             height: Style.defaultSpacing
                             width: Style.defaultSpacing
-                            visible: dekko.isSmallFF
+                            visible: sageteamail.isSmallFF
                             name: "back"
                             anchors {
                                 horizontalCenter: parent.horizontalCenter
@@ -114,7 +113,7 @@ DekkoPage {
                             height: Style.defaultIconSize
                             width: Style.defaultIconSize
                             name: Icons.JunkIcon
-                            color: message.isJunk ? UbuntuColors.red : UbuntuColors.ash
+                            color: message.isJunk ? LomiriColors.red : LomiriColors.ash
                             anchors {
                                 horizontalCenter: parent.horizontalCenter
                                 top: parent.top
@@ -152,7 +151,7 @@ DekkoPage {
                         right: parent.right
                     }
                     layoutDirection: Qt.RightToLeft
-                    spacing: dekko.isSmallFF ? 0 : Style.smallSpacing
+                    spacing: sageteamail.isSmallFF ? 0 : Style.smallSpacing
 
                     AbstractButton {
                         id: delBtn
@@ -239,7 +238,7 @@ DekkoPage {
             id: webview
             anchors {
                 fill: parent
-                leftMargin: !dekko.isSmallFF ? units.gu(1) : 0
+                leftMargin: !sageteamail.isSmallFF ? units.gu(1) : 0
             }
 
             url: "about:blank"

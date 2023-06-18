@@ -1,5 +1,5 @@
 import QtQuick 2.4
-import Ubuntu.Components 1.3
+import Lomiri.Components 1.3
 import SageteaMail.Mail 1.0
 import SageteaMail.Mail.Accounts 1.0
 import SageteaMail.Mail.API 1.0
@@ -10,7 +10,7 @@ import SageteaMail.Mail.Stores.Views 1.0
 import SageteaMail.Components 1.0
 import MazDB 1.0
 import PlugMan 1.0
-import SageteaMail.Ubuntu.Components 1.0
+import SageteaMail.Lomiri.Components 1.0
 import "../delegates"
 
 StyledItem {
@@ -20,7 +20,7 @@ StyledItem {
     property bool panelMode: false
 
     theme: ThemeSettings{
-        name: "Ubuntu.Components.Themes.SuruDark"
+        name: "Lomiri.Components.Themes.SuruDark"
     }
 
     MazDBSettings {
@@ -31,7 +31,7 @@ StyledItem {
 
     Rectangle {
         anchors.fill: parent
-        color: UbuntuColors.inkstone
+        color: LomiriColors.inkstone
     }
 
     ActionRegistry {
@@ -41,11 +41,16 @@ StyledItem {
             Action {
                 iconName: "edit"
                 onTriggered: ViewActions.openComposer()
-                visible: dekko.isLargeFF
+                visible: sageteamail.isLargeFF
+            },
+            Action {
+                iconName: "info"
+                visible: sageteamail.isSmallFF
+                onTriggered: ViewActions.openSettings()
             },
             Action {
                 iconName: "settings"
-                visible: dekko.isSmallFF
+                visible: sageteamail.isSmallFF
                 onTriggered: ViewActions.openSettings()
             }
         ]
@@ -60,7 +65,7 @@ StyledItem {
             width: parent.width
             height: units.gu(5)
             implicitHeight: height
-            visible: !dekko.isMediumFF
+            visible: !sageteamail.isMediumFF
 
             StretchRow {
                 anchors {
@@ -73,11 +78,11 @@ StyledItem {
                     height: units.gu(5.5)
                     width: units.gu(5)
                     implicitWidth: width
-                    iconColor: UbuntuColors.silk
+                    iconColor: LomiriColors.silk
                     iconSize: units.gu(2.5)
-                    highlightColor: UbuntuColors.slate
+                    highlightColor: LomiriColors.slate
                     action: Action {
-                        visible: dekko.isSmallFF
+                        visible: sageteamail.isSmallFF
                         iconName: "navigation-menu"
                         onTriggered: ViewActions.toggleNavDrawer()
                     }
@@ -91,9 +96,9 @@ StyledItem {
                         height: units.gu(5.5)
                         width: units.gu(5)
                         implicitWidth: width
-                        iconColor: UbuntuColors.silk
+                        iconColor: LomiriColors.silk
                         iconSize: units.gu(2.5)
-                        highlightColor: UbuntuColors.slate
+                        highlightColor: LomiriColors.slate
                         action: modelData
                     }
                 }
@@ -195,11 +200,26 @@ StyledItem {
                         width: parent.width * 4 / 5
                         wrapMode: Text.WordWrap
                         horizontalAlignment: Text.AlignHCenter
-                        color: UbuntuColors.orange
-                        text: i18n.tr("You are using a free version of SageTeaMail, consider upgrading to <a href=\"https://sagetea.ai/product/sagetea-mail/\">Pro</a>")
+                        text: i18n.tr("You are runnig a free edition of SageTeaMail, consider upgrade to Pro")
                         font.bold: true
                         onLinkActivated: Qt.openUrlExternally(link)
                     }
+
+                        Rectangle {
+                        color: "transparent"
+                        width: parent.width
+                        height: units.gu(3)
+                    }
+
+                        Button {
+                        id: upgradeButton
+                        
+                        anchors.horizontalCenter: parent.horizontalCenter
+                        color: LomiriColors.orange
+                        text: i18n.tr("Upgrade Pro")
+                        onClicked: Qt.openUrlExternally("https://sagetea.ai/product/sagetea-mail/")
+                    }
+
 //                        Item {
 //                            anchors {
 //                                left: parent.left
@@ -216,7 +236,7 @@ StyledItem {
 //                                    verticalCenter: parent.verticalCenter
 //                                }
 //                                text: "Smart Folders"
-//                                color: UbuntuColors.ash
+//                                color: LomiriColors.ash
 //                            }
 //                        }
 //                        Line {
@@ -226,21 +246,21 @@ StyledItem {
 //                                right: parent.right
 //                                rightMargin: units.gu(1)
 //                            }
-//                            color: UbuntuColors.slate
+//                            color: LomiriColors.slate
 //                        }
 
 
 //                        ListItem {
 //                            implicitHeight: i1.implicitHeight
 //                            divider.visible: false
-//                            highlightColor: UbuntuColors.ash
+//                            highlightColor: LomiriColors.ash
 //                            ListItemLayout {
 //                                title.text: "Today"
 //                                title.font.weight: Font.DemiBold
-//                                title.color: UbuntuColors.silk
+//                                title.color: LomiriColors.silk
 //                                Icon {
 //                                    name: "calendar-today"
-//                                    color: UbuntuColors.silk
+//                                    color: LomiriColors.silk
 //                                    height: units.gu(2.2)
 //                                    width: height
 
@@ -252,14 +272,14 @@ StyledItem {
 //                        ListItem {
 //                            implicitHeight: i1.implicitHeight
 //                            divider.visible: false
-//                            highlightColor: UbuntuColors.ash
+//                            highlightColor: LomiriColors.ash
 //                            ListItemLayout {
 //                                title.text: "Todo"
 //                                title.font.weight: Font.DemiBold
-//                                title.color: UbuntuColors.silk
+//                                title.color: LomiriColors.silk
 //                                Icon {
 //                                    name: "view-list-symbolic"
-//                                    color: UbuntuColors.silk
+//                                    color: LomiriColors.silk
 //                                    height: units.gu(2.2)
 //                                    width: height
 
@@ -271,14 +291,14 @@ StyledItem {
 //                        ListItem {
 //                            implicitHeight: i1.implicitHeight
 //                            divider.visible: false
-//                            highlightColor: UbuntuColors.ash
+//                            highlightColor: LomiriColors.ash
 //                            ListItemLayout {
 //                                title.text: "Done"
 //                                title.font.weight: Font.DemiBold
-//                                title.color: UbuntuColors.silk
+//                                title.color: LomiriColors.silk
 //                                Icon {
 //                                    name: "tick"
-//                                    color: UbuntuColors.silk
+//                                    color: LomiriColors.silk
 //                                    height: units.gu(2.2)
 //                                    width: height
 
@@ -291,14 +311,14 @@ StyledItem {
 //                        ListItem {
 //                            implicitHeight: i1.implicitHeight
 //                            divider.visible: false
-//                            highlightColor: UbuntuColors.ash
+//                            highlightColor: LomiriColors.ash
 //                            ListItemLayout {
 //                                title.text: "Mailing Lists"
 //                                title.font.weight: Font.DemiBold
-//                                title.color: UbuntuColors.silk
+//                                title.color: LomiriColors.silk
 //                                Icon {
 //                                    name: "contact-group"
-//                                    color: UbuntuColors.silk
+//                                    color: LomiriColors.silk
 //                                    height: units.gu(2.2)
 //                                    width: height
 
@@ -310,14 +330,14 @@ StyledItem {
 //                        ListItem {
 //                            implicitHeight: i1.implicitHeight
 //                            divider.visible: false
-//                            highlightColor: UbuntuColors.ash
+//                            highlightColor: LomiriColors.ash
 //                            ListItemLayout {
 //                                title.text: "Search: \"dekko-dev\""
 //                                title.font.weight: Font.DemiBold
-//                                title.color: UbuntuColors.silk
+//                                title.color: LomiriColors.silk
 //                                Icon {
 //                                    name: "search"
-//                                    color: UbuntuColors.silk
+//                                    color: LomiriColors.silk
 //                                    height: units.gu(2.2)
 //                                    width: height
 
@@ -343,7 +363,7 @@ StyledItem {
 //                                    verticalCenter: parent.verticalCenter
 //                                }
 //                                text: "Folders"
-//                                color: UbuntuColors.ash
+//                                color: LomiriColors.ash
 //                            }
 //                        }
 
@@ -354,7 +374,7 @@ StyledItem {
 //                                right: parent.right
 //                                rightMargin: units.gu(1)
 //                            }
-//                            color: UbuntuColors.slate
+//                            color: LomiriColors.slate
 //                        }
 
 //                        Item {
@@ -377,14 +397,14 @@ StyledItem {
 //                        ListItem {
 //                            implicitHeight: i1.implicitHeight
 //                            divider.visible: false
-//                            highlightColor: UbuntuColors.ash
+//                            highlightColor: LomiriColors.ash
 //                            ListItemLayout {
 //                                title.text: "GMail"
 //                                title.font.weight: Font.DemiBold
-//                                title.color: UbuntuColors.silk
+//                                title.color: LomiriColors.silk
 //                                Icon {
 //                                    name: "contact"
-//                                    color: UbuntuColors.silk
+//                                    color: LomiriColors.silk
 //                                    height: units.gu(2.2)
 //                                    width: height
 
@@ -396,14 +416,14 @@ StyledItem {
 //                        ListItem {
 //                            implicitHeight: i1.implicitHeight
 //                            divider.visible: false
-//                            highlightColor: UbuntuColors.ash
+//                            highlightColor: LomiriColors.ash
 //                            ListItemLayout {
 //                                title.text: "Dekko"
 //                                title.font.weight: Font.DemiBold
-//                                title.color: UbuntuColors.silk
+//                                title.color: LomiriColors.silk
 //                                Icon {
 //                                    name: "contact"
-//                                    color: UbuntuColors.silk
+//                                    color: LomiriColors.silk
 //                                    height: units.gu(2.2)
 //                                    width: height
 
@@ -415,14 +435,14 @@ StyledItem {
 //                        ListItem {
 //                            implicitHeight: i1.implicitHeight
 //                            divider.visible: false
-//                            highlightColor: UbuntuColors.ash
+//                            highlightColor: LomiriColors.ash
 //                            ListItemLayout {
 //                                title.text: "Home"
 //                                title.font.weight: Font.DemiBold
-//                                title.color: UbuntuColors.silk
+//                                title.color: LomiriColors.silk
 //                                Icon {
 //                                    name: "contact"
-//                                    color: UbuntuColors.silk
+//                                    color: LomiriColors.silk
 //                                    height: units.gu(2.2)
 //                                    width: height
 

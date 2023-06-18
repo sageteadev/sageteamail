@@ -11,7 +11,7 @@
 NotifyService::NotifyService(QObject *parent): ServicePlugin(parent)
 {
     m_service = QStringLiteral("sageteamaild-notify");
-    m_serviceFile = QString("%1/.config/upstart/%2.conf").arg(QDir::homePath(), m_service);
+    m_serviceFile = QString("%1/.config/systemd/user/%2.service").arg(QDir::homePath(), m_service);
 }
 
 QString NotifyService::pluginId() const
@@ -65,6 +65,89 @@ bool NotifyService::serviceFileInstalled() const
     return QFile(m_serviceFile).exists();
 }
 
+bool NotifyService::installServiceFile() const
+{
+    QFile f(m_serviceFile);
+    QDir parent = QFileInfo(f).dir();
+
+    if (!parent.mkpath(".")) {
+        qDebug() << "[NotifyService] Cannot create systemd user service directory";
+        return false;
+    }
+
+    if (!f.open(QFile::WriteOnly | QFile::Truncate)) {
+        qDebug() << "[NotifyService] Cannot create service file";
+        return false;
+    }
+
+    QString appDir = QCoreApplication::applicationDirPath();
+    appDir.replace(QRegExp("sageteamail2.sagetea/[^/]+/"), "sageteamail2.sagetea/current/");
+
+    f.write("[Unit]\n");
+    f.write("Description=SageteaMail Notify Service\n");
+    f.write("Requires=sageteamaild.service\n");
+
+    f.write("\n[Service]\n");
+    f.write("ExecStart=" + appDir.toUtf8() + "/plugins/notify/" + m_service.toUtf8() + "\n");
+    f.write("WorkingDirectory=" + appDir.toUtf8() + "\n");
+    f.write("Environment=\"LD_LIBRARY_PATH=" + appDir.toUtf8() + "/../:$LD_LIBRARY_PATH\"\n");
+    f.write("Environment=\"SAGETEAMAIL_PLUGINS=" + appDir.toUtf8() + "/../SageteaMail/plugins\"\n");
+    f.write("Environment=\"QMF_PLUGINS=" + appDir.toUtf8() + "/../qmf/plugins5\"\n");
+    f.write("Environment=\"QMF_DATA=" + QDir::homePath().toUtf8() + "/.cache/sageteamail2.sagetea\"\n");
+    f.write("Restart=on-failure\n");
+
+    f.write("\n[Install]\n");
+    f.write("WantedBy=graphical-session.target\n");
+    
+    f.close();
+
+    qDebug() << "[NotifyService] should enable service";
+    int ret1 = QProcess::execute("systemctl", {"--user", "daemon-reload"});
+    int ret2 = QProcess::execute("systemctl", {"--user", "enable", m_service});
+
+    return ret1 == 0 && ret2 == 0;
+}
+
+bool NotifyService::removeServiceFile() const
+{
+    if (serviceFileInstalled()) {
+        int ret = QProcess::execute("systemctl", {"--user", "disable", "--now", m_service});
+        return QFile(m_serviceFile).remove() && ret == 0;
+    }
+    return true;
+}
+
+bool NotifyService::serviceRunning() const
+{
+    QProcess p;
+    p.start("systemctl", {"--user", "status", m_service});
+    p.waitForFinished();
+    QByteArray output = p.readAll();
+    qDebug() << output;
+    return output.contains("active (running)");
+}
+
+bool NotifyService::startService()
+{
+    qDebug() << "[NotifyService] should start service";
+    int ret = QProcess::execute("systemctl", {"--user", "start", m_service});
+    return ret == 0;
+}
+
+bool NotifyService::restartService()
+{
+    qDebug() << "[NotifyService] should restart service";
+    int ret = QProcess::execute("systemctl", {"--user", "restart", m_service});
+    return ret == 0;
+}
+
+bool NotifyService::stopService()
+{
+    qDebug() << "[NotifyService] should stop service";
+    int ret = QProcess::execute("systemctl", {"--user", "stop", m_service});
+    return ret == 0;
+}
+
 bool NotifyService::newVersion()
 {
     static const QString path = SnapStandardPaths::writableLocation(SnapStandardPaths::AppConfigLocation) + QStringLiteral("/sageteamaild-notify/settings.ini");
@@ -81,67 +164,6 @@ bool NotifyService::newVersion()
     }
     settings.sync();
     return result;
-}
-
-bool NotifyService::installServiceFile() const
-{
-    QFile f(m_serviceFile);
-    if (!f.open(QFile::WriteOnly | QFile::Truncate)) {
-        qDebug() << "[NotifyService] Cannot create service file";
-        return false;
-    }
-
-    QString appDir = QCoreApplication::applicationDirPath();
-    appDir.replace(QRegExp("sageteamail2.sagetea/[^/]+/"), "sageteamail2.sagetea/current/");
-    f.write("start on started sageteamaild\n");
-    f.write("pre-start script\n");
-    f.write("   initctl set-env LD_LIBRARY_PATH=" + appDir.toUtf8() + "/../:$LD_LIBRARY_PATH\n");
-    f.write("   initctl set-env SAGETEAMAIL_PLUGINS=" + appDir.toUtf8() + "/../SageteaMail/plugins\n");
-    f.write("   initctl set-env QMF_PLUGINS=" + appDir.toUtf8() + "/../qmf/plugins5\n");
-    f.write("   initctl set-env QMF_DATA=$HOME/.cache/sageteamail2.sagetea\n");
-    f.write("end script\n");
-    f.write("exec " + appDir.toUtf8() + "/plugins/notify/" + m_service.toUtf8() + "\n");
-    f.close();
-    return true;
-}
-
-bool NotifyService::removeServiceFile() const
-{
-    if (serviceFileInstalled()) {
-        return QFile(m_serviceFile).remove();
-    }
-    return true;
-}
-
-bool NotifyService::serviceRunning() const
-{
-    QProcess p;
-    p.start("initctl", {"status", m_service});
-    p.waitForFinished();
-    QByteArray output = p.readAll();
-    qDebug() << output;
-    return output.contains("running");
-}
-
-bool NotifyService::startService()
-{
-    qDebug() << "[NotifyService] should start service";
-    int ret = QProcess::execute("start", {m_service});
-    return ret == 0;
-}
-
-bool NotifyService::restartService()
-{
-    qDebug() << "[NotifyService] should restart service";
-    int ret = QProcess::execute("restart", {m_service});
-    return ret == 0;
-}
-
-bool NotifyService::stopService()
-{
-    qDebug() << "[NotifyService] should stop service";
-    int ret = QProcess::execute("stop", {m_service});
-    return ret == 0;
 }
 
 QVariantMap NotifyService::documentation() const

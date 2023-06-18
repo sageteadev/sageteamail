@@ -44,7 +44,7 @@ Project {
             cpp.defines: [
                 "CLICK_MODE",
                 "APP_NAME=\"sageteamail2.sagetea\"",
-                "APP_ORG=\"sagetea\"",
+                "APP_ORG=\"sageteamail2.sagetea\"",
                 "SAGETEAMAIL_VERSION=\"" + project.version + "-" + project.revision + "\""
             ]
         }
@@ -69,7 +69,7 @@ Project {
                 "assets/configuration/**"
             ]
             qbs.install: true
-            qbs.installDir: "/usr/share/sageteamail/configuration"
+            qbs.installDir: "/usr/share/sagetea/configuration"
             qbs.installSourceBase: "assets/configuration"
         }
 
@@ -80,7 +80,7 @@ Project {
 
         Group {
             name: "QML Resources"
-            files: ["dekko.qrc"]
+            files: ["sageteamail.qrc"]
         }
 
         Group {

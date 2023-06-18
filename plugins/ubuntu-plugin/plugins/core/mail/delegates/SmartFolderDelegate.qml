@@ -1,7 +1,6 @@
 /* Copyright (C) 2016 - 2017 Dan Chapman <dpniel@ubuntu.com>
-   Copyright (C) 2022 - 2023 Rúben Carneiro <rubencarneiro01@gmail.com>
 
-   This file is part of SageTea Mail, email client for Ubuntu devices
+   This file is part of Dekko email client for Ubuntu devices
 
    This program is free software; you can redistribute it and/or
    modify it under the terms of the GNU General Public License as
@@ -17,13 +16,13 @@
    along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 import QtQuick 2.4
-import Ubuntu.Components 1.3
-import Ubuntu.Components.Popups 1.3
+import Lomiri.Components 1.3
+import Lomiri.Components.Popups 1.3
 import SageteaMail.Mail 1.0
 import SageteaMail.Components 1.0
 import SageteaMail.Mail.Stores.Views 1.0
-import SageteaMail.Ubuntu.Components 1.0
-import SageteaMail.Ubuntu.Constants 1.0
+import SageteaMail.Lomiri.Components 1.0
+import SageteaMail.Lomiri.Constants 1.0
 
 ListItem {
     id: li
@@ -76,7 +75,7 @@ ListItem {
         id: layout
         title.text: folder ? folder.displayName : ""
         title.font.weight: Font.DemiBold
-        title.color: UbuntuColors.silk
+        title.color: LomiriColors.silk
         height: units.gu(6)
 
         CachedImage {
@@ -84,16 +83,16 @@ ListItem {
             height: units.gu(2.6)
             width: height
             name: folder ? getIconForFolderType(folder) : ""
-            color: UbuntuColors.silk
+            color: LomiriColors.silk
             SlotsLayout.position: SlotsLayout.Leading
         }
 
-        UbuntuShape {
+        LomiriShape {
             id: shape
             // TODO: We should probably display total count for To-Do smart folder
             visible: folder && folder.smartCount > 0
-            aspect: UbuntuShape.Flat
-            color: UbuntuColors.slate
+            aspect: LomiriShape.Flat
+            color: LomiriColors.slate
             height: units.gu(2.2)
             width: countLable.width < height ? height : countLable.width + units.gu(1)
             Label {
@@ -101,7 +100,7 @@ ListItem {
                 anchors.margins: units.gu(0.5)
                 anchors.centerIn: parent
                 fontSize: "small"
-                color: UbuntuColors.porcelain
+                color: LomiriColors.porcelain
                 text: folder ? folder.smartCount : ""
             }
         }
@@ -114,7 +113,7 @@ ListItem {
                 anchors.left: parent.left
                 height: parent.height
                 width: units.dp(1)
-                color: UbuntuColors.slate
+                color: LomiriColors.slate
             }
             Icon {
                 height: Style.defaultSpacing
@@ -154,21 +153,21 @@ ListItem {
                     id: dlayout
                     height: units.gu(5)
                     title.text: qsTr("Inbox (%1)").arg(qtObject.displayName)
-                    title.color: UbuntuColors.silk
+                    title.color: LomiriColors.silk
 
                     CachedImage {
                         height: units.gu(2.4)
                         width: height
                         name: Icons.InboxIcon
-                        color: UbuntuColors.silk
+                        color: LomiriColors.silk
                         SlotsLayout.position: SlotsLayout.Leading
                     }
 
-                    UbuntuShape {
+                    LomiriShape {
                         id: dshape
                         visible: qtObject.smartCount > 0
-                        aspect: UbuntuShape.Flat
-                        color: UbuntuColors.slate
+                        aspect: LomiriShape.Flat
+                        color: LomiriColors.slate
                         height: units.gu(2.2)
                         width: dcountLable.width < height ? height : dcountLable.width + units.gu(1)
                         Label {
@@ -177,7 +176,7 @@ ListItem {
                             anchors.centerIn: parent
                             text: qtObject.smartCount
                             fontSize: "small"
-                            color: UbuntuColors.porcelain
+                            color: LomiriColors.porcelain
                         }
                     }
                 }

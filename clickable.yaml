@@ -1,0 +1,57 @@
+clickable_minimum_required: '7.11.0'
+
+framework: ubuntu-sdk-20.04
+ignore_review_errors: true
+
+builder: custom
+build: ${ROOT}/build.sh
+build_dir: build/${ARCH_TRIPLET}
+
+image_setup:
+  run:
+  - ln -sf /usr/lib/qt5/bin/* /usr/lib/x86_64-linux-gnu/qt5/bin/
+
+dependencies_host:
+- binfmt-support
+- libexpat1-dev
+- libpipeline1
+- libpython3-dev
+- libqt5script5
+- python-pip-whl
+- python3-dev
+- python3-pip
+- python3-setuptools
+- python3-wheel
+- qbs
+- qbs-common
+- qemu-user-static
+- zlib1g-dev
+dependencies_target:
+- libaccounts-qt5-dev
+- qtbase5-dev
+- libsasl2-dev
+- libsasl2-modules
+- libsignon-plugins-common1
+- libsignon-qt5-dev
+- libsnappy-dev
+- libsnappy1v5
+- qml-module-qtquick-privatewidgets
+- qt5-qmake-bin
+- signon-plugin-oauth2
+- signon-plugin-oauth2-dev
+- signon-plugin-sasl
+- signon-plugin-sasl-dev
+
+install_dir: ${BUILD_DIR}/build/install-root/
+
+libraries:
+  update-ts-files:
+    builder: custom
+    build: cd ${ROOT} && scripts/update-i18n \
+      SageteaMail \
+      plugins/ubuntu-plugin \
+      plugins/ubuntu-notification-plugin \
+      plugins/cache-manager-plugin
+
+    dependencies_host:
+    - qttools5-dev-tools

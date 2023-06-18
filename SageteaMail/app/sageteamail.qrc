@@ -1,5 +1,5 @@
 <RCC>
     <qresource prefix="/qml">
-        <file>Dekko.qml</file>
+        <file>SageteaMail.qml</file>
     </qresource>
 </RCC>

@@ -46,15 +46,6 @@ Project {
     }
 
     SubProject {
-        filePath: "pyotherside/pyotherside.qbs"
-        Properties {
-            usePreBuilt: project.click
-            pyothersideInstallDir: project.qmlDir + "/io/thp/pyotherside"
-            condition: project.pyotherside
-        }
-    }
-
-    SubProject {
         filePath: "notify/notify.qbs"
         Properties {
             qmlDir: project.qmlDir

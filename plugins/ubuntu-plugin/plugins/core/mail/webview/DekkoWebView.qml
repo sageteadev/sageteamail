@@ -17,16 +17,16 @@
 */
 import QtQuick 2.4
 import QtFeedback 5.0
-import Ubuntu.Components 1.3
-import Ubuntu.Components.Popups 1.3
-import Ubuntu.Components.ListItems 1.3 as ListItem
-import Ubuntu.Content 1.3
+import Lomiri.Components 1.3
+import Lomiri.Components.Popups 1.3
+import Lomiri.Components.ListItems 1.3 as ListItem
+import Lomiri.Content 1.3
 import QtQuick.Controls 2.1 as QQC2
 import QtWebEngine 1.5
 import SageteaMail.Components 1.0
 import SageteaMail.Mail.Settings 1.0
-import SageteaMail.Ubuntu.Components 1.0
-import SageteaMail.Ubuntu.Dialogs 1.0
+import SageteaMail.Lomiri.Components 1.0
+import SageteaMail.Lomiri.Dialogs 1.0
 import SageteaMail.WebContext 1.0
 import QtQuick.Controls.Suru 2.2
 
@@ -126,9 +126,9 @@ WebEngineView {
             readonly property string _template: "Mozilla/5.0 (Linux; Ubuntu %1%2%3) AppleWebKit/%4 Chromium/%5 %6Safari/%7%8"
 
             // FIXME: compute at build time (using lsb_release)
-            readonly property string _ubuntuVersion: "16.04"
+            readonly property string _ubuntuVersion: "20.04"
 
-            readonly property string _attributes: smallScreen ? "like Android 4.4" : ""
+            readonly property string _attributes: smallScreen ? "like Android" : ""
 
             readonly property string _hardwareID: ""
 
@@ -254,20 +254,20 @@ WebEngineView {
     onNewViewRequested: navigationRequested
 
     onNavigationRequested: {
-        console.log("[Dekko Web View] RequestUrl", request.url)
+        console.log("[SageteaMail Web View] RequestUrl", request.url)
         if (("" + request.url).startsWith("dekko-msg") ||
             ("" + request.url).startsWith("dekko-part") ||
             ("" + request.url).startsWith("cid")) {
             request.action = 0
         }
         else {
-            PopupUtils.open(linkClickedDialog, dekko, {externalLink: request.url})
+            PopupUtils.open(linkClickedDialog, sageteamail, {externalLink: request.url})
             request.action = 255
         }
     }
 
     onJavaScriptConsoleMessage: {
-        var msg = "[Dekko Web View] [JS] (%1:%2) %3".arg(sourceID).arg(lineNumber).arg(message)
+        var msg = "[SageteaMail Web View] [JS] (%1:%2) %3".arg(sourceID).arg(lineNumber).arg(message)
         console.log(msg)
     }
 

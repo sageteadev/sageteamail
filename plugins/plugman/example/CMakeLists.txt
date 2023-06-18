@@ -25,7 +25,7 @@ set(service_SRCS
 
 add_library(notify-service SHARED ${service_SRCS})
 qt5_use_modules(notify-service Core)
-target_link_libraries(notify-service sagteamail-plugins)
+target_link_libraries(notify-service sageteamail-plugins)
 set_target_properties(notify-service PROPERTIES
     LIBRARY_OUTPUT_DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}/plugins)
 

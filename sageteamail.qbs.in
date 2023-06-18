@@ -3,10 +3,10 @@ import qbs.Process
 
 Project {
     id: sageteamail
-    name: "SageteaMail"
-    property string appName: "SageteaMail"
-    property string pkgName: "sageteamail2.sagetea"
-    property string version: "0.1.1"
+    name: "Sagetea Mail"
+    property string appName: "Sagetea Mail"
+    property string pkgName: "sageteamail.sagetea"
+    property string version: "0.1.2"
 	property string arch: "%HOST_ARCH%"
 
     Probe {
@@ -100,8 +100,6 @@ Project {
         description: "Which UI should the app be built with"
         allowedValues: ["none", "ubuntu", "qqc2"]
     }
-
-    property bool pyotherside: true
 
     property bool buildAll: true
 

@@ -3,7 +3,7 @@
     "description": "SageTea Email Client.",
     "framework": "@CLICK_FRAMEWORK@",
     "architecture": "@CLICK_ARCH@",
-    "title": "SageteaMail",
+    "title": "Sagetea Mail",
     "hooks": {
         "sageteamail": {
             "apparmor": "sageteamail2.apparmor",

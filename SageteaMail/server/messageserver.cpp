@@ -584,8 +584,8 @@ MessageServerThread::~MessageServerThread()
 
 void MessageServerThread::run()
 {
-    // This is ~/.config/dekko.dekkoproject/dekkod.conf
-//    qMailLoggersRecreate("dekko.dekkoproject", "dekkod", "Msgsrv");
+    // This is ~/.config/sageteamaild.sagetea/sageteamaild.conf
+//    qMailLoggersRecreate("sageteamail.sagetea", "sageteamaild", "Msgsrv");
     // Start messageserver
     MessageServer server;
 

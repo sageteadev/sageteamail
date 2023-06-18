@@ -1,7 +1,6 @@
 /* Copyright (C) 2016 - 2017 Dan Chapman <dpniel@ubuntu.com>
-   Copyright (C) 2022 - 2023 Rúben Carneiro <rubencarneiro01@gmail.com>
 
-   This file is part of SageTea Mail, email client for Ubuntu devices
+   This file is part of Dekko email client for Ubuntu devices
 
    This program is free software; you can redistribute it and/or
    modify it under the terms of the GNU General Public License as
@@ -18,26 +17,26 @@
 */
 import QtQuick 2.4
 import QtQuick.Layouts 1.1
-import Ubuntu.Components 1.3
+import Lomiri.Components 1.3
 import SageteaMail.Components 1.0
 import SageteaMail.Mail 1.0
-import SageteaMail.Ubuntu.Components 1.0
+import SageteaMail.Lomiri.Components 1.0
 import SageteaMail.Mail.API 1.0
-import SageteaMail.Ubuntu.Constants 1.0
+import SageteaMail.Lomiri.Constants 1.0
 
 Item {
     id: header
 
     property var msg
 
-    height: dekko.isSmallFF ? units.gu(6) : units.gu(9.075)
+    height: sageteamail.isSmallFF ? units.gu(6) : units.gu(9.075)
     anchors {
         left: parent.left
         right: parent.right
         top: parent.top
     }
 
-    property bool showBack: dekko.isSmallFF
+    property bool showBack: sageteamail.isSmallFF
 
     HeaderButton {
         id: inner_button
@@ -90,7 +89,7 @@ Item {
             text: msg.from.name
             clip: true
             elide: Text.ElideRight
-            visible: !dekko.isSmallFF
+            visible: !sageteamail.isSmallFF
             font.weight: Font.Normal
 
         }
@@ -124,7 +123,7 @@ Item {
             iconName: "delete"
             shortcut: "Delete"
             onTriggered: {
-                if (dekko.isSmallFF) {
+                if (sageteamail.isSmallFF) {
                     ViewActions.popStageArea(ViewKeys.messageListStack)
                     ViewActions.delayCall('resetSelectedMsgIndex')
                     ViewActions.delayCallWithArgs('deleteMessage', {msgId: msg.messageId})

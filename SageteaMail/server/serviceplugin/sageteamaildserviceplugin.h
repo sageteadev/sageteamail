@@ -39,7 +39,7 @@ private:
     QString m_serviceFile;
 };
 
-class SageteaMaildServicePlugin : public QObject, public PluginInterface
+class SageteaMailServicePlugin : public QObject, public PluginInterface
 {
     Q_OBJECT
     Q_INTERFACES(PluginInterface)

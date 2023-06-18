@@ -1,7 +1,6 @@
 /* Copyright (C) 2016 - 2017 Dan Chapman <dpniel@ubuntu.com>
-   Copyright (C) 2022 - 2023 Rúben Carneiro <rubencarneiro01@gmail.com>
 
-   This file is part of SageTea Mail, email client for Ubuntu devices
+   This file is part of Dekko email client for Ubuntu devices
 
    This program is free software; you can redistribute it and/or
    modify it under the terms of the GNU General Public License as
@@ -29,7 +28,7 @@ class AccountConfiguration;
 void AccountsPlugin::registerTypes(const char *uri)
 {
     Q_ASSERT(uri == QLatin1String("SageteaMail.Mail.Accounts"));
-    // @uri Dekko.Accounts
+    // @uri SageteaMail.Accounts
     qmlRegisterType<Account>(uri, 1, 0, "Account");
     qmlRegisterType<AccountValidator>(uri, 1, 0, "AccountValidator");
     qmlRegisterType<NewAccount>(uri, 1, 0, "NewAccount");

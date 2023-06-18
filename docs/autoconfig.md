@@ -91,7 +91,7 @@ This has been modelled on mozilla's ISPDB with a few new additions
             <email>dan@workemail.com</email>
             <replyTo>dan@otherworkemail.com</replyTo>
             <organization>Dekko Project</organization>
-            <signature>Sent using Dekko from my Ubuntu device</signature>
+            <signature>Sent with Dekko</signature>
          </identity>
          <identity>
             <name>Dan Chapman</name>
@@ -183,7 +183,7 @@ Attribute values are the same as for the xml config so I won't duplicate those h
                 "email": "dan@workemail.com",
                 "replyTo": "dan@otherworkemail.com",
                 "organization": "Dekko Project",
-                "signature": "Sent using Dekko from my Ubuntu device"
+                "signature": "Sent with Dekko"
             },
             "identity": {
                 "primary": false,

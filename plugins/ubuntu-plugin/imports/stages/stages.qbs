@@ -35,6 +35,6 @@ Product {
         condition: project.ui === "ubuntu"
         fileTagsFilter: "stages-plugin"
         qbs.install: project.ui === "ubuntu"
-        qbs.installDir: project.qmlDir + "/SageteaMail/Ubuntu/Stage"
+        qbs.installDir: project.qmlDir + "/SageteaMail/Lomiri/Stage"
     }
 }

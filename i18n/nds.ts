@@ -38,7 +38,7 @@
     </message>
     <message>
         <location filename="../SageteaMail/stores/Accounts/AccountSetup.qml" line="536"/>
-        <source>Sent using Dekko from my Ubuntu device</source>
+        <source>Sent using SageteaMail from my Ubuntu device</source>
         <translation>Sendt mit Smuck van menen Ubuntu Gereedskupp</translation>
     </message>
 </context>
@@ -259,8 +259,8 @@ Wullt du düsse bruken?</translation>
     <name>ComposeWindow</name>
     <message>
         <location filename="../plugins/ubuntu-plugin/plugins/core/mail/composer/ComposeWindow.qml" line="24"/>
-        <source>Dekko Composer</source>
-        <translation>Dekko Paketverwaltung</translation>
+        <source>SageteaMail Composer</source>
+        <translation>SageteaMail Paketverwaltung</translation>
     </message>
 </context>
 <context>
@@ -1122,7 +1122,7 @@ Wullt du düsse bruken?</translation>
     <name>MainUI</name>
     <message>
         <location filename="../plugins/ubuntu-plugin/qml/MainUI.qml" line="17"/>
-        <source>Dekko Mail</source>
+        <source>SageteaMail Mail</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -2184,7 +2184,7 @@ Wullt du düsse bruken?</translation>
     <name>SettingsWindow</name>
     <message>
         <location filename="../plugins/ubuntu-plugin/plugins/core/settings/SettingsWindow.qml" line="26"/>
-        <source>Dekko Settings</source>
+        <source>SageteaMail Settings</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -2224,7 +2224,7 @@ Wullt du düsse bruken?</translation>
     <name>SmtpAccountConfiguration</name>
     <message>
         <location filename="../SageteaMail/backend/accounts/AccountConfiguration.cpp" line="459"/>
-        <source>Sent using Dekko from my Ubuntu device</source>
+        <source>Sent using SageteaMail from my Ubuntu device</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

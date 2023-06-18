@@ -14,7 +14,7 @@ int main(int argc, char *argv[])
     QGuiApplication a(argc, argv);
 
     QCoreApplication::setApplicationName("pluggy");
-    QCoreApplication::setOrganizationName("sageteamail"); // define the same prefix on all code 
+    QCoreApplication::setOrganizationName("sageteamail");
 
     // First declare the plugin locations we support
     PluginRegistry::instance()->setPluginLocations(QStringList()
@@ -27,7 +27,7 @@ int main(int argc, char *argv[])
     // a list of directories. These can be anywhere you like.
     // By default the registry will always look for a plugins directory in the same location
     // as the executable i.e QCoreApplication::applicationDirPath() + "/plugins".
-    // Or alternatively you can also set the DEKKO_PLUGINS environment vairable to a directory
+    // Or alternatively you can also set the SAGETEAMAIL_PLUGINS environment vairable to a directory
     // that the registry should search.
     PluginRegistry::instance()->loadPlugins(QStringList() << QStringLiteral("/tmp/SageteaMail"));
 

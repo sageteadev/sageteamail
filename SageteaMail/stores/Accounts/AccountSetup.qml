@@ -1,7 +1,6 @@
 /* Copyright (C) 2016 - 2017 Dan Chapman <dpniel@ubuntu.com>
-   Copyright (C) 2022 - 2023 Rúben Carneiro <rubencarneiro01@gmail.com>
 
-   This file is part of SageTea Mail, email client for Ubuntu devices
+   This file is part of Dekko email client for Ubuntu devices
 
    This program is free software; you can redistribute it and/or
    modify it under the terms of the GNU General Public License as
@@ -534,8 +533,7 @@ AppListener {
             identity["name"] = account.outgoing.name
             identity["email"] = account.outgoing.email
             identity["replyTo"] = ""
-            //TRANSLATORS: 'convergent' describes the apps ability of being usable on desktop and mobile devices running different OS
-            identity["signature"] = qsTr("Sent with SageTea Mail - your office to go mail client")
+            identity["signature"] = qsTr("Sent with SageTea Mail")
             AccountActions.addIdentity(identity)
         }
     }

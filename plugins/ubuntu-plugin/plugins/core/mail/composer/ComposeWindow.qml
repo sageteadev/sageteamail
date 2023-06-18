@@ -1,12 +1,12 @@
 import QtQuick 2.4
 import QtQuick.Window 2.1
-import Ubuntu.Components 1.3
-import Ubuntu.Components.Popups 1.3
+import Lomiri.Components 1.3
+import Lomiri.Components.Popups 1.3
 import SageteaMail.Mail.API 1.0
 import SageteaMail.Mail.Stores.Composer 1.0
 import SageteaMail.Mail.Workers 1.0
-import SageteaMail.Ubuntu.Dialogs 1.0
-import SageteaMail.Ubuntu.Components 1.0
+import SageteaMail.Lomiri.Dialogs 1.0
+import SageteaMail.Lomiri.Components 1.0
 import MazDB 1.0
 import PlugMan 1.0
 import QuickFlux 1.0
@@ -21,10 +21,10 @@ Window {
     flags: Qt.Window
     modality: Qt.NonModal
 
-    title: qsTr("Dekko Composer")
+    title: qsTr("SageteaMail Composer")
 
     onClosing: {
-        if (ComposerStore.builder.hasDraft && !isRunningOnMir) {
+        if (ComposerStore.builder.hasDraft) {
             close.accepted = false
             ComposerActions.discardMessage()
         } else {

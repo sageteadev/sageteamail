@@ -1,4 +1,4 @@
-module SageteaMail.Ubuntu.Helpers
+module SageteaMail.Lomiri.Helpers
 
 DevPanel 1.0 DevPanel.qml
 DevWindow 1.0 DevWindow.qml

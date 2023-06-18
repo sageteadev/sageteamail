@@ -15,7 +15,7 @@ Project {
             readonly property string requirementsFile: project.sourceDirectory + "/requirements.txt"
             // DO NOT EDIT MANUALLY. this would normally be hidden
             // inside a module.
-            property bool installed: true
+            property bool installed: false
             // The directory where you want to install pypi packages
             // You might like to add this directory to you .gitignore/.bzrignore
             property string sourceDir: project.sourceDirectory + "/pylibs"
@@ -48,7 +48,7 @@ Project {
             // Only enable this if pip3 installed correctly
 //            condition: pip3.installed
             name: "Python Libs"
-            prefix: pip3.sourceDir + (project.click ? "/lib/python3.4/site-packages/" : "/lib/python3.5/site-packages/")
+            prefix: pip3.sourceDir + (project.click ? "/lib/python3.4/site-packages/" : "/lib/python3.8/site-packages/")
             // List the package dirs you want in the qml plugin
             // The idea here is to only declare what's _required_ to reduce our size a bit
             files: [
@@ -63,7 +63,7 @@ Project {
                 "pygments/**",
                 "html2text/**",
                 "importlib_metadata**/**",
-                "zipp/**"
+                "zipp**"
             ]
             // cssutils comes with a large test suite
             // which we don't really need in the snap
@@ -79,7 +79,7 @@ Project {
             qbs.install: true
             qbs.installDir: project.qmlDir + "/SageteaMail/" + project.name
             // This ensures we maintain the directory structure
-            qbs.installSourceBase: pip3.sourceDir + (project.click ? "/lib/python3.4/site-packages/" : "/lib/python3.5/site-packages/")
+            qbs.installSourceBase: pip3.sourceDir + (project.click ? "/lib/python3.4/site-packages/" : "/lib/python3.8/site-packages/")
         }
 
         Group {

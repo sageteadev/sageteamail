@@ -22,5 +22,6 @@ Enabled=1
 Enabled=1
 ```
 
-After restarting dekkod by issuing `restart dekkod` a log will be created in `~/.cachce/upstart/dekkod.log`.
+After restarting dekkod by issuing `systemctl --user restart dekkod`, the log can
+be fetch with `journalctl --user -u dekkod`.
 

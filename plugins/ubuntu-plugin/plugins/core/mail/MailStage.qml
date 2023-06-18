@@ -1,7 +1,6 @@
 /* Copyright (C) 2016 - 2017 Dan Chapman <dpniel@ubuntu.com>
-   Copyright (C) 2022 - 2023 Rúben Carneiro <rubencarneiro01@gmail.com>
 
-   This file is part of SageTea Mail, email client for Ubuntu devices
+   This file is part of Dekko email client for Ubuntu devices
 
    This program is free software; you can redistribute it and/or
    modify it under the terms of the GNU General Public License as
@@ -17,18 +16,18 @@
    along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 import QtQuick 2.4
-import Ubuntu.Components 1.3
+import Lomiri.Components 1.3
 import SageteaMail.Mail 1.0
 import SageteaMail.Mail.API 1.0
 import SageteaMail.Components 1.0
 import SageteaMail.Mail.Settings 1.0
 import SageteaMail.Mail.Stores.Views 1.0
 import SageteaMail.Mail.Stores.Mail 1.0
-import SageteaMail.Ubuntu.Constants 1.0
-import SageteaMail.Ubuntu.Stage 1.0
+import SageteaMail.Lomiri.Constants 1.0
+import SageteaMail.Lomiri.Stage 1.0
 import QuickFlux 1.0
 import MazDB 1.0
-import SageteaMail.Ubuntu.Components 1.0
+import SageteaMail.Lomiri.Components 1.0
 import "./views"
 
 BaseStage {
@@ -55,8 +54,8 @@ BaseStage {
         // for smaller FF's
         PanelContainer {
             id: p1
-            visible: dekko.isLargeFF
-            resizable: !dekko.isSmallFF
+            visible: sageteamail.isLargeFF
+            resizable: !sageteamail.isSmallFF
             minSize: units.gu(20)
             maxSize: units.gu(50)
             height: parent.height
@@ -81,7 +80,7 @@ BaseStage {
             // on small FF. This sets the implicit width to -1
             // and restores it on going back to larger FF's
             stretchOnSmallFF: true
-            resizable: !dekko.isSmallFF
+            resizable: !sageteamail.isSmallFF
             minSize: units.gu(40)
             maxSize: units.gu(60)
             size: units.gu(40)
@@ -117,7 +116,7 @@ BaseStage {
                     top: parent.top
                     bottom: parent.bottom
                 }
-                enabled: !dekko.isLargeFF
+                enabled: !sageteamail.isLargeFF
                 visible: enabled
                 animate: true
                 width: Style.defaultPanelWidth
@@ -130,7 +129,7 @@ BaseStage {
         }
         // Take rest of space when visible
         Stretcher {
-            visible: !dekko.isSmallFF
+            visible: !sageteamail.isSmallFF
             anchors {
                 top: parent.top
                 bottom: parent.bottom
@@ -155,7 +154,7 @@ BaseStage {
 
         PanelContainer {
             id: p3
-            visible: dekko.isLargeFF && pluginStage.stackCount
+            visible: sageteamail.isLargeFF && pluginStage.stackCount
             minSize: units.gu(20)
             maxSize: units.gu(40)
             size: units.gu(30)
@@ -190,7 +189,7 @@ BaseStage {
                 MessageActions.setCurrentMessage(message.msgId)
 
                 var style = Qt.resolvedUrl("./messageview/DefaultMessagePage.qml")
-                if (dekko.isSmallFF) {
+                if (sageteamail.isSmallFF) {
                     // leftStage push msgview
                     ViewActions.pushToStageArea(ViewKeys.messageListStack, style, {msgId: message.msgId})
                 } else {
@@ -218,7 +217,7 @@ BaseStage {
             type: MessageKeys.openAccountFolder
             onDispatched: {
                 ViewActions.closeNavDrawer()
-                if (dekko.isLargeFF) {
+                if (sageteamail.isLargeFF) {
                     ViewActions.pushToStageArea(ViewKeys.navigationStack,
                                                 Qt.resolvedUrl("./views/FolderListView.qml"),
                                                 {

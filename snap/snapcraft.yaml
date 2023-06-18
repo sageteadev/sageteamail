@@ -1,6 +1,6 @@
 name: sageteamail
-version: 0.1.1
-summary: SageTea Mail Client
+version: 0.9.7
+summary: SageteaMail email client
 description: Fast e-mail client for Ubuntu devices
 confinement: strict
 grade: devel
@@ -49,7 +49,6 @@ parts:
         build-packages:
             - qttools5-dev-tools
             - libgsettings-qt-dev
-            - libconnectivity-qt1-dev
             - libnotify-dev
             - libmessaging-menu-dev
             - libunity-dev

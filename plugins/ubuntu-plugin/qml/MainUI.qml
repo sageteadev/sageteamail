@@ -1,6 +1,6 @@
 import QtQuick 2.4
 import QtQuick.Window 2.1
-import Ubuntu.Components 1.3
+import Lomiri.Components 1.3
 import MazDB 1.0
 import QtWebEngine 1.5 
 
@@ -30,7 +30,7 @@ Window {
         Loader {
             asynchronous: false
             anchors.fill: parent
-            source: Qt.resolvedUrl("./Dekko.qml")
+            source: Qt.resolvedUrl("./SageteaMail.qml")
         }
     }
 }

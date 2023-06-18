@@ -1,12 +1,12 @@
 import QtQuick 2.4
 import QtQuick.Controls.Suru 2.2
-import Ubuntu.Components 1.3
+import Lomiri.Components 1.3
 import SageteaMail.Mail.API 1.0
 import SageteaMail.Mail.Stores.Accounts 1.0
 import SageteaMail.Mail.Stores.Settings 1.0
 import MazDB 1.0
-import SageteaMail.Ubuntu.Constants 1.0
-import SageteaMail.Ubuntu.Components 1.0
+import SageteaMail.Lomiri.Constants 1.0
+import SageteaMail.Lomiri.Components 1.0
 import "../models"
 
 DekkoPage {

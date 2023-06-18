@@ -1,7 +1,6 @@
 /* Copyright (C) 2016 - 2017 Dan Chapman <dpniel@ubuntu.com>
-   Copyright (C) 2022 - 2023 Rúben Carneiro <rubencarneiro01@gmail.com>
 
-   This file is part of SageTea Mail, email client for Ubuntu devices
+   This file is part of Dekko email client for Ubuntu devices
 
    This program is free software; you can redistribute it and/or
    modify it under the terms of the GNU General Public License as
@@ -18,13 +17,13 @@
 */
 import QtQuick 2.4
 import QtQuick.Controls.Suru 2.2
-import Ubuntu.Components 1.3
+import Lomiri.Components 1.3
 import SageteaMail.Mail 1.0
 import SageteaMail.Mail.API 1.0
 import SageteaMail.Components 1.0
-import SageteaMail.Ubuntu.Components 1.0
+import SageteaMail.Lomiri.Components 1.0
 import "../delegates"
-import SageteaMail.Ubuntu.Constants 1.0
+import SageteaMail.Lomiri.Constants 1.0
 
 DekkoPage {
     id: contactFilterView
@@ -41,7 +40,7 @@ DekkoPage {
         iconName: "back"
         onTriggered: ViewActions.popStageArea(ViewKeys.messageListStack)
     }
-    extendHeader: !dekko.isSmallFF
+    extendHeader: !sageteamail.isSmallFF
 
     MessageList {
         id: msgList
@@ -153,7 +152,7 @@ DekkoPage {
             addDisplaced: DekkoAnimation.listViewAddDisplacedTransition
             remove: DekkoAnimation.listViewRemoveTransition
             removeDisplaced: DekkoAnimation.listViewRemoveDisplacedTransition
-            highlight: !dekko.isSmallFF ? Style.highlightBar : null
+            highlight: !sageteamail.isSmallFF ? Style.highlightBar : null
             highlightFollowsCurrentItem: true
             highlightMoveDuration: 200
             model: msgList.model

@@ -1,7 +1,6 @@
 /* Copyright (C) 2016 - 2017 Dan Chapman <dpniel@ubuntu.com>
-   Copyright (C) 2022 - 2023 Rúben Carneiro <rubencarneiro01@gmail.com>
 
-   This file is part of SageTea Mail, email client for Ubuntu devices
+   This file is part of Dekko email client for Ubuntu devices
 
    This program is free software; you can redistribute it and/or
    modify it under the terms of the GNU General Public License as
@@ -63,7 +62,7 @@ AppListener {
             if (uri.startsWith("sageteamail:")) {
                 var commands = uri.split("://")[1].split("/")
                 if (commands.isEmpty()) {
-                    Log.logInfo("UriListener::processUri", "Sageteamail command is empty, nothing we can do")
+                    Log.logInfo("UriListener::processUri", "SageteaMail command is empty, nothing we can do")
                     return
                 }
                 switch (commands.at(0).toLowerCase()) {

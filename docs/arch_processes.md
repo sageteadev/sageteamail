@@ -20,7 +20,7 @@ node "Dekkos processes" {
     }
 }
 
-frame "Upstart User Session" as upstart {
+frame "Systemd User Session" as systemd {
 }
 
 frame "System Notification Center" as sysnotifcenter {
@@ -36,8 +36,8 @@ cloud "Mail server" as mailserver{
 dekko --> dekkoworker : starts
 dekko --> dekkod : restarts
 dekko --> dekkodnotify : restarts
-upstart --> dekkod : starts, stops
-upstart --> dekkodnotify : starts, stops
+systemd --> dekkod : starts, stops
+systemd --> dekkodnotify : starts, stops
 dekkod --> mailserver : sends, fetches and syncs mail
 dekkodnotify --> sysnotifcenter : displays notifications
 

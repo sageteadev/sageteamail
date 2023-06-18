@@ -1,7 +1,6 @@
 /* Copyright (C) 2016 - 2017 Dan Chapman <dpniel@ubuntu.com>
-   Copyright (C) 2022 - 2023 Rúben Carneiro <rubencarneiro01@gmail.com>
 
-   This file is part of SageTea Mail, email client for Ubuntu devices
+   This file is part of Dekko email client for Ubuntu devices
 
    This program is free software; you can redistribute it and/or
    modify it under the terms of the GNU General Public License as
@@ -324,7 +323,7 @@ QString Paths::findProviderFile()
 {
     QString configFile;
     // TODO: make this configurable
-    const QString filePath = QStringLiteral("/usr/share/sageteamail/configuration/serviceProviders.conf");
+    const QString filePath = QStringLiteral("/usr/share/sagetea/configuration/serviceProviders.conf");
     if (configFile.isEmpty()) {
         QString desktopFile = QDir(QCoreApplication::applicationDirPath()).absoluteFilePath(QStringLiteral("../../../sageteamail2.desktop"));
         if (QFile::exists(desktopFile)) {
@@ -385,7 +384,7 @@ QString Paths::findUserScript(const QString &scriptName)
 {
     QString script;
     if (script.isEmpty()) {
-        QString desktopFile = QDir(QCoreApplication::applicationDirPath()).absoluteFilePath(QStringLiteral("../../../sageteamail.desktop"));
+        QString desktopFile = QDir(QCoreApplication::applicationDirPath()).absoluteFilePath(QStringLiteral("../../../dekko.desktop"));
         if (QFile::exists(desktopFile)) {
             // we are a click so lets tidy up our manifest path and find qmlfile
             QDir clickRoot = QFileInfo(desktopFile).absoluteDir();

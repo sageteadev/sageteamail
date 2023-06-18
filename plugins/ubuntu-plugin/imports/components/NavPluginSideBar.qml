@@ -1,14 +1,14 @@
 import QtQuick 2.4
-import Ubuntu.Components 1.3
+import Lomiri.Components 1.3
 import SageteaMail.Mail.API 1.0
 import SageteaMail.Components 1.0
 import MazDB 1.0
-import SageteaMail.Ubuntu.Components 1.0
+import SageteaMail.Lomiri.Components 1.0
 import SageteaMail.Mail.Stores.Views 1.0
 
 Rectangle {
     id: bar
-    color: UbuntuColors.inkstone
+    color: LomiriColors.inkstone
 
     NavPluginModel {
         id: navPlugins
@@ -20,7 +20,7 @@ Rectangle {
             top: parent.top
             bottom: parent.bottom
         }
-        color: UbuntuColors.slate
+        color: LomiriColors.slate
     }
 
     StretchColumn {
@@ -31,19 +31,19 @@ Rectangle {
             height: units.gu(6)
             width: bar.width
             implicitHeight: height
-            visible: !dekko.isLargeFF
+            visible: !sageteamail.isLargeFF
 
             onClicked: ViewActions.toggleNavDrawer()
 
             Rectangle {
                 anchors.fill: parent
                 visible: drawerBtn.pressed
-                color: UbuntuColors.slate
+                color: LomiriColors.slate
             }
 
             Icon {
                 name: "navigation-menu"
-                color: UbuntuColors.silk
+                color: LomiriColors.silk
                 height: units.gu(3)
                 width: height
                 anchors.centerIn: parent
@@ -52,8 +52,8 @@ Rectangle {
         }
 
         Line {
-            color: UbuntuColors.slate
-            visible: !dekko.isLargeFF
+            color: LomiriColors.slate
+            visible: !sageteamail.isLargeFF
             anchors {
                 left: parent.left
                 right: parent.right
@@ -94,11 +94,11 @@ Rectangle {
                             Rectangle {
                                 anchors.fill: parent
                                 visible: btn.pressed
-                                color: UbuntuColors.slate
+                                color: LomiriColors.slate
                             }
 
                             Rectangle {
-                                color: UbuntuColors.blue
+                                color: LomiriColors.blue
                                 width: units.dp(2)
                                 anchors {
                                     left: parent.left
@@ -110,7 +110,7 @@ Rectangle {
 
                             Icon {
                                 name: action.iconName
-                                color: btn.isSelected ? UbuntuColors.blue : UbuntuColors.silk
+                                color: btn.isSelected ? LomiriColors.blue : LomiriColors.silk
                                 height: units.gu(3.4)
                                 width: height
                                 anchors.centerIn: parent
@@ -122,7 +122,7 @@ Rectangle {
         }
 
         Line {
-            color: UbuntuColors.slate
+            color: LomiriColors.slate
             anchors {
                 left: parent.left
                 right: parent.right
@@ -142,12 +142,35 @@ Rectangle {
             Rectangle {
                 anchors.fill: parent
                 visible: settingsBtn.pressed
-                color: UbuntuColors.slate
+                color: LomiriColors.slate
             }
 
             Icon {
                 name: "settings"
-                color: UbuntuColors.silk
+                color: LomiriColors.silk
+                height: units.gu(3.4)
+                width: height
+                anchors.centerIn: parent
+            }
+        }
+
+        AbstractButton {
+            id: infoBtn
+            height: units.gu(7)
+            width: bar.width
+            implicitHeight: height
+
+            onClicked: ViewActions.openSettings()
+
+            Rectangle {
+                anchors.fill: parent
+                visible: settingsBtn.pressed
+                color: LomiriColors.slate
+            }
+
+            Icon {
+                name: "info"
+                color: LomiriColors.silk
                 height: units.gu(3.4)
                 width: height
                 anchors.centerIn: parent

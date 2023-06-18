@@ -89,7 +89,7 @@ void PluginLoader::loadPlugins(QMultiMap<QString, PluginInfo *> &registry, const
     }
 
     qCDebug(PLUGIN_LOADER) << "Looking for sageteamail spec plugins";
-    // Now scan for any *.dekko-plugin specs and generate a DekkoPlugin
+    // Now scan for any *.dekko-plugin specs and generate a SageteaMailPlugin
     pluginPaths.clear();
 
     Q_FOREACH(const QString &directory, dirs) {

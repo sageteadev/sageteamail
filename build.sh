@@ -25,7 +25,7 @@ cat ${DIR}/click/sageteamail2.desktop.in | sed "s/%HOST_ARCH_TRIPLET%/${ARCH_TRI
 function install_python_deps
 {
     PYTHON_DEPS="bs4 cssutils encutils html2text jinja2 markdown markupsafe pygments pynliner soupsieve zipp"
-    PYTHON_DEPS_DIR=pylibs/lib/python3.5/site-packages/
+    PYTHON_DEPS_DIR=pylibs/lib/python3.8/site-packages/
     SAGETEAMAIL_PYTHON_DIR=$CLICK_LD_LIBRARY_PATH/SageteaMail/Python/
 
     mkdir -p $SAGETEAMAIL_PYTHON_DIR
@@ -34,7 +34,6 @@ function install_python_deps
     done
     
     cp -r $PYTHON_DEPS_DIR/importlib_metadata* $SAGETEAMAIL_PYTHON_DIR
-    #cp -r $PYTHON_DEPS_DIR/zipp/zipp.py $SAGETEAMAIL_PYTHON_DIR
 }
 
 ROOT="$( cd "$DIR" >/dev/null 2>&1 && pwd )"
@@ -56,7 +55,7 @@ export LIB_DIR=$DIR_PREFIX
 export DATA_DIR=/usr/share/sageteamail
 export QML_DIR=$LIB_DIR
 
-qbs build -d $BUILD_DIR -f . --clean-install-root --show-progress config:build project.click:true project.pyotherside:false project.binDir:$BIN_DIR project.libDir:$LIB_DIR project.qmlDir:$QML_DIR project.dataDir:$DATA_DIR profile:sageteamailqt5-$ARCH qbs.buildVariant:$BUILD_VARIANT qbs.installPrefix:/
+qbs build -d $BUILD_DIR -f . --clean-install-root --show-progress config:build project.click:true project.binDir:$BIN_DIR project.libDir:$LIB_DIR project.qmlDir:$QML_DIR project.dataDir:$DATA_DIR profile:sageteamailqt5-$ARCH qbs.buildVariant:$BUILD_VARIANT qbs.installPrefix:/
 
 install_python_deps
 

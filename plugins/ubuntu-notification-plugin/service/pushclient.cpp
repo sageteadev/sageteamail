@@ -23,12 +23,12 @@
 #include <QDebug>
 
 #define PUSH_APP_ID "sageteamail2.sagetea_sageteamail"
-#define PUSH_SERVICE "com.ubuntu.PushNotifications"
-#define POSTAL_SERVICE "com.ubuntu.Postal"
-#define PUSH_PATH "/com/ubuntu/PushNotifications"
-#define POSTAL_PATH "/com/ubuntu/Postal"
-#define PUSH_IFACE "com.ubuntu.PushNotifications"
-#define POSTAL_IFACE "com.ubuntu.Postal"
+#define PUSH_SERVICE "com.lomiri.PushNotifications"
+#define POSTAL_SERVICE "com.lomiri.Postal"
+#define PUSH_PATH "/com/lomiri/PushNotifications"
+#define POSTAL_PATH "/com/lomiri/Postal"
+#define PUSH_IFACE "com.lomiri.PushNotifications"
+#define POSTAL_IFACE "com.lomiri.Postal"
 
 static QPointer<PushClient> s_client;
 PushClient *PushClient::instance()
@@ -138,7 +138,7 @@ bool PushClient::updateCount(const QString &tag, const bool remove)
 //shamelessly stolen from accounts-polld
 QByteArray PushClient::makePath(const QString &appId)
 {
-    QByteArray path(QByteArrayLiteral("/com/ubuntu/Postal/"));
+    QByteArray path(QByteArrayLiteral("/com/lomiri/Postal/"));
 
     QByteArray pkg = appId.split('_').first().toUtf8();
     for (int i = 0; i < pkg.count(); i++) {

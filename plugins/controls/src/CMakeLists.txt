@@ -25,7 +25,7 @@ set(QML_CTRL_SRCS
     ${CMAKE_CURRENT_SOURCE_DIR}/Stack.js
     ${CMAKE_CURRENT_SOURCE_DIR}/qmldir
 )
-add_custom_target(SageteMailControlsQml ALL SOURCES ${QML_CTRL_SRCS})
+add_custom_target(SageteaMailControlsQml ALL SOURCES ${QML_CTRL_SRCS})
 
 
 install(TARGETS controlsplugin DESTINATION ${CONTROLS_PLUGIN_DIR})

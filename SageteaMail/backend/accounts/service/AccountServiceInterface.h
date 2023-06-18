@@ -21,7 +21,7 @@
 #include <QtDBus/QtDBus>
 
 /*
- * Proxy class for interface org.sagetea.AccountService
+ * Proxy class for interface org.dekkoproject.AccountService
  */
 class AccountServiceInterface: public QDBusAbstractInterface
 {

@@ -47,97 +47,97 @@ QString MailServiceAdaptor::undoDescription() const
 
 void MailServiceAdaptor::createStandardFolders(qulonglong accountId)
 {
-    // handle method call org.sagetea.MailService.createStandardFolders
+    // handle method call org.dekkoproject.MailService.createStandardFolders
     QMetaObject::invokeMethod(parent(), "createStandardFolders", Q_ARG(qulonglong, accountId));
 }
 
 void MailServiceAdaptor::deleteMessages(const QList<quint64> &ids)
 {
-    // handle method call org.sagetea.MailService.deleteMessages
+    // handle method call org.dekkoproject.MailService.deleteMessages
     QMetaObject::invokeMethod(parent(), "deleteMessages", Q_ARG(QList<quint64>, ids));
 }
 
 void MailServiceAdaptor::downloadMessagePart(qulonglong msgId, const QString &partLocation)
 {
-    // handle method call org.sagetea.MailService.downloadMessagePart
+    // handle method call org.dekkoproject.MailService.downloadMessagePart
     QMetaObject::invokeMethod(parent(), "downloadMessagePart", Q_ARG(qulonglong, msgId), Q_ARG(QString, partLocation));
 }
 
 void MailServiceAdaptor::downloadMessages(const QList<quint64> &msgIds)
 {
-    // handle method call org.sagetea.MailService.downloadMessages
+    // handle method call org.dekkoproject.MailService.downloadMessages
     QMetaObject::invokeMethod(parent(), "downloadMessages", Q_ARG(QList<quint64>, msgIds));
 }
 
 void MailServiceAdaptor::emptyTrash(const QList<quint64> &accountIds)
 {
-    // handle method call org.sagetea.MailService.emptyTrash
+    // handle method call org.dekkoproject.MailService.emptyTrash
     QMetaObject::invokeMethod(parent(), "emptyTrash", Q_ARG(QList<quint64>, accountIds));
 }
 
 void MailServiceAdaptor::markFolderRead(qulonglong folderId)
 {
-    // handle method call org.sagetea.MailService.markFolderRead
+    // handle method call org.dekkoproject.MailService.markFolderRead
     QMetaObject::invokeMethod(parent(), "markFolderRead", Q_ARG(qulonglong, folderId));
 }
 
 void MailServiceAdaptor::markMessageForwarded(const QList<quint64> &msgIds)
 {
-    // handle method call org.sagetea.MailService.markMessageForwarded
+    // handle method call org.dekkoproject.MailService.markMessageForwarded
     QMetaObject::invokeMethod(parent(), "markMessageForwarded", Q_ARG(QList<quint64>, msgIds));
 }
 
 void MailServiceAdaptor::markMessagesDone(const QList<quint64> &msgIds, bool done)
 {
-    // handle method call org.sagetea.MailService.markMessagesDone
+    // handle method call org.dekkoproject.MailService.markMessagesDone
     QMetaObject::invokeMethod(parent(), "markMessagesDone", Q_ARG(QList<quint64>, msgIds), Q_ARG(bool, done));
 }
 
 void MailServiceAdaptor::markMessagesImportant(const QList<quint64> &msgIds, bool important)
 {
-    // handle method call org.sagetea.MailService.markMessagesImportant
+    // handle method call org.dekkoproject.MailService.markMessagesImportant
     QMetaObject::invokeMethod(parent(), "markMessagesImportant", Q_ARG(QList<quint64>, msgIds), Q_ARG(bool, important));
 }
 
 void MailServiceAdaptor::markMessagesRead(const QList<quint64> &msgIds, bool read)
 {
-    // handle method call org.sagetea.MailService.markMessagesRead
+    // handle method call org.dekkoproject.MailService.markMessagesRead
     QMetaObject::invokeMethod(parent(), "markMessagesRead", Q_ARG(QList<quint64>, msgIds), Q_ARG(bool, read));
 }
 
 void MailServiceAdaptor::markMessagesReplied(const QList<quint64> &msgIds, bool all)
 {
-    // handle method call org.sagetea.MailService.markMessagesReplied
+    // handle method call org.dekkoproject.MailService.markMessagesReplied
     QMetaObject::invokeMethod(parent(), "markMessagesReplied", Q_ARG(QList<quint64>, msgIds), Q_ARG(bool, all));
 }
 
 void MailServiceAdaptor::markMessagesTodo(const QList<quint64> &msgIds, bool read)
 {
-    // handle method call org.sagetea.MailService.markMessagesTodo
+    // handle method call org.dekkoproject.MailService.markMessagesTodo
     QMetaObject::invokeMethod(parent(), "markMessagesTodo", Q_ARG(QList<quint64>, msgIds), Q_ARG(bool, read));
 }
 
 void MailServiceAdaptor::moveToFolder(const QList<quint64> &msgIds, qulonglong folderId)
 {
-    // handle method call org.sagetea.MailService.moveToFolder
+    // handle method call org.dekkoproject.MailService.moveToFolder
     QMetaObject::invokeMethod(parent(), "moveToFolder", Q_ARG(QList<quint64>, msgIds), Q_ARG(qulonglong, folderId));
 }
 
 void MailServiceAdaptor::moveToStandardFolder(const QList<quint64> &msgIds, int folderType, bool userTriggered)
 {
-    // handle method call org.sagetea.MailService.moveToStandardFolder
+    // handle method call org.dekkoproject.MailService.moveToStandardFolder
     QMetaObject::invokeMethod(parent(), "moveToStandardFolder", Q_ARG(QList<quint64>, msgIds), Q_ARG(int, folderType), Q_ARG(bool, userTriggered));
 }
 
 void MailServiceAdaptor::pruneCache(const QList<quint64> &msgIds)
 {
-    // handle method call org.sagetea.MailService.pruneCache
+    // handle method call org.dekkoproject.MailService.pruneCache
     QMetaObject::invokeMethod(parent(), "pruneCache", Q_ARG(QList<quint64>, msgIds));
 }
 
 QList<quint64> MailServiceAdaptor::queryFolders(const QByteArray &folderKey, const QByteArray &sortKey, int limit)
 {
-    // handle method call org.sagetea.MailService.queryFolders
+    // handle method call org.dekkoproject.MailService.queryFolders
     QList<quint64> folders;
     QMetaObject::invokeMethod(parent(), "queryFolders", Q_RETURN_ARG(QList<quint64>, folders), Q_ARG(QByteArray, folderKey), Q_ARG(QByteArray, sortKey), Q_ARG(int, limit));
     return folders;
@@ -145,7 +145,7 @@ QList<quint64> MailServiceAdaptor::queryFolders(const QByteArray &folderKey, con
 
 QList<quint64> MailServiceAdaptor::queryMessages(const QByteArray &msgKey, const QByteArray &sortKey, int limit)
 {
-    // handle method call org.sagetea.MailService.queryMessages
+    // handle method call org.dekkoproject.MailService.queryMessages
     QList<quint64> messages;
     QMetaObject::invokeMethod(parent(), "queryMessages", Q_RETURN_ARG(QList<quint64>, messages), Q_ARG(QByteArray, msgKey), Q_ARG(QByteArray, sortKey), Q_ARG(int, limit));
     return messages;
@@ -153,49 +153,49 @@ QList<quint64> MailServiceAdaptor::queryMessages(const QByteArray &msgKey, const
 
 void MailServiceAdaptor::removeMessage(qulonglong msgId, int option)
 {
-    // handle method call org.sagetea.MailService.removeMessage
+    // handle method call org.dekkoproject.MailService.removeMessage
     QMetaObject::invokeMethod(parent(), "removeMessage", Q_ARG(qulonglong, msgId), Q_ARG(int, option));
 }
 
 void MailServiceAdaptor::restoreMessage(qulonglong id)
 {
-    // handle method call org.sagetea.MailService.restoreMessage
+    // handle method call org.dekkoproject.MailService.restoreMessage
     QMetaObject::invokeMethod(parent(), "restoreMessage", Q_ARG(qulonglong, id));
 }
 
 void MailServiceAdaptor::sendAnyQueuedMail()
 {
-    // handle method call org.sagetea.MailService.sendAnyQueuedMail
+    // handle method call org.dekkoproject.MailService.sendAnyQueuedMail
     QMetaObject::invokeMethod(parent(), "sendAnyQueuedMail");
 }
 
 void MailServiceAdaptor::sendMessage(qulonglong msgId)
 {
-    // handle method call org.sagetea.MailService.sendMessage
+    // handle method call org.dekkoproject.MailService.sendMessage
     QMetaObject::invokeMethod(parent(), "sendMessage", Q_ARG(qulonglong, msgId));
 }
 
 void MailServiceAdaptor::sendPendingMessages()
 {
-    // handle method call org.sagetea.MailService.sendPendingMessages
+    // handle method call org.dekkoproject.MailService.sendPendingMessages
     QMetaObject::invokeMethod(parent(), "sendPendingMessages");
 }
 
 void MailServiceAdaptor::syncFolders(qulonglong accountId, const QList<quint64> &folders)
 {
-    // handle method call org.sagetea.MailService.syncFolders
+    // handle method call org.dekkoproject.MailService.syncFolders
     QMetaObject::invokeMethod(parent(), "syncFolders", Q_ARG(qulonglong, accountId), Q_ARG(QList<quint64>, folders));
 }
 
 void MailServiceAdaptor::synchronizeAccount(qulonglong accountId)
 {
-    // handle method call org.sagetea.MailService.synchronizeAccount
+    // handle method call org.dekkoproject.MailService.synchronizeAccount
     QMetaObject::invokeMethod(parent(), "synchronizeAccount", Q_ARG(qulonglong, accountId));
 }
 
 int MailServiceAdaptor::totalCount(const QByteArray &msgKey)
 {
-    // handle method call org.sagetea.MailService.totalCount
+    // handle method call org.dekkoproject.MailService.totalCount
     int count;
     QMetaObject::invokeMethod(parent(), "totalCount", Q_RETURN_ARG(int, count), Q_ARG(QByteArray, msgKey));
     return count;
@@ -203,7 +203,7 @@ int MailServiceAdaptor::totalCount(const QByteArray &msgKey)
 
 void MailServiceAdaptor::undoActions()
 {
-    // handle method call org.sagetea.MailService.undoActions
+    // handle method call org.dekkoproject.MailService.undoActions
     QMetaObject::invokeMethod(parent(), "undoActions");
 }
 

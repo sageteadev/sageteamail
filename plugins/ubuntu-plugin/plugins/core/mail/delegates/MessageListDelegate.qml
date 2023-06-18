@@ -17,16 +17,16 @@
 */
 import QtQuick 2.4
 import QtQuick.Controls.Suru 2.2
-import Ubuntu.Components 1.3
-import Ubuntu.Components.Popups 1.1
+import Lomiri.Components 1.3
+import Lomiri.Components.Popups 1.1
 import QtGraphicalEffects 1.0
 import SageteaMail.Components 1.0
 import SageteaMail.Mail 1.0
 import SageteaMail.Mail.API 1.0
 import SageteaMail.Mail.Settings 1.0
-import SageteaMail.Ubuntu.Components 1.0
+import SageteaMail.Lomiri.Components 1.0
 import "../popovers"
-import SageteaMail.Ubuntu.Constants 1.0
+import SageteaMail.Lomiri.Constants 1.0
 
 ListItemWithActions {
     id: normalMessageItemDelegate
@@ -166,7 +166,7 @@ ListItemWithActions {
                 }
                 name: canLoad && msg.isImportant ? Icons.StarredIcon : Icons.UnStarredIcon
                 Suru.highlightType: Suru.WarningHighlight
-                color: canLoad && msg.isImportant ? Suru.highlightColor : UbuntuColors.ash
+                color: canLoad && msg.isImportant ? Suru.highlightColor : LomiriColors.ash
                 MouseArea {
                     anchors.fill: parent
                     onClicked: MessageActions.markMessageImportant(msg.messageId, !msg.isImportant)
@@ -185,7 +185,7 @@ ListItemWithActions {
                 }
                 visible: canLoad && msg.hasAttachments
                 name: Icons.AttachmentIcon
-                color: UbuntuColors.ash
+                color: LomiriColors.ash
             }
         }
     }

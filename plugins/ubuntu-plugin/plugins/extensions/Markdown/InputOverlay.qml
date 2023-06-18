@@ -1,5 +1,5 @@
 import QtQuick 2.4
-import Ubuntu.Components 1.3
+import Lomiri.Components 1.3
 
 // Modified version of InputHandler from the UITK
 MultiPointTouchArea {
@@ -84,8 +84,8 @@ MultiPointTouchArea {
     }
 
     function showInputPanel() {
-        if (!UbuntuApplication.inputMethod.visible) {
-            UbuntuApplication.inputMethod.show();
+        if (!LomiriApplication.inputMethod.visible) {
+            LomiriApplication.inputMethod.show();
         }
         textChanged = false;
     }
@@ -278,7 +278,7 @@ MultiPointTouchArea {
             }
         }
         onFocusChanged: {
-            UbuntuApplication.inputMethod.commit()
+            LomiriApplication.inputMethod.commit()
             state = (root.focus) ? "" : "inactive";
             if (root.focus) {
                 textEdit.forceActiveFocus()

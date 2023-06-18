@@ -17,9 +17,9 @@
 */
 import QtQuick 2.4
 import QtQuick.Controls.Suru 2.2
-import Ubuntu.Components 1.3
+import Lomiri.Components 1.3
 import SageteaMail.Components 1.0
-import SageteaMail.Ubuntu.Constants 1.0
+import SageteaMail.Lomiri.Constants 1.0
 
 Item {
     id: filterBar
@@ -30,7 +30,7 @@ Item {
     width: parent.width
 
     Behavior on height {
-        UbuntuNumberAnimation {duration: UbuntuAnimation.SnapDuration}
+        LomiriNumberAnimation {duration: LomiriAnimation.SnapDuration}
     }
 
     Rectangle {
@@ -68,7 +68,7 @@ Item {
             Label {
                 id: label
                 text: modelData
-                color: row.currentIndex === model.index ? UbuntuColors.blue : Suru.tertiaryForegroundColor
+                color: row.currentIndex === model.index ? LomiriColors.blue : Suru.tertiaryForegroundColor
                 anchors.horizontalCenter: parent.horizontalCenter
                 anchors.top: parent.top
                 anchors.topMargin: units.gu(0.2)
@@ -76,7 +76,7 @@ Item {
                 renderType: Text.NativeRendering
             }
             Rectangle {
-                color: row.currentIndex === model.index ? UbuntuColors.blue : Suru.neutralColor
+                color: row.currentIndex === model.index ? LomiriColors.blue : Suru.neutralColor
                 height: units.dp(2)
                 width: parent.width
                 anchors.bottom: parent.bottom

@@ -34,7 +34,7 @@ export QMF_PLUGINS=$LD_LIBRARY_PATH/qmf/plugins5
 export SAGETEAMAIL_PLUGINS=$LD_LIBRARY_PATH/SageteaMail/plugins
 
 # Location qmf will store the mailstore cache
-export QMF_DATA=$HOME/.cache/sageteamail2
+export QMF_DATA=$HOME/.cache/sageteamail
 
 echo $0
 echo $1

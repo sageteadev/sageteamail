@@ -1,4 +1,2 @@
-#!/usr/lib/initramfs-tools/bin/busybox static-sh
+#!/bin/bash
 cp $1 $2
-
-# This is just a temporary hack!

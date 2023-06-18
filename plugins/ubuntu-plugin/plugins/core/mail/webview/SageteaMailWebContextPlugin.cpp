@@ -6,7 +6,7 @@
 void SageteaMailWebContextPlugin::registerTypes(const char *uri)
 {
     Q_ASSERT(uri == QLatin1String("SageteaMail.WebContext"));
-    // @uri Dekko.WebContext
+    // @uri SageteaMail.WebContext
     qmlRegisterType<SageteaMailWebContext>(uri, 1, 0, "SageteaMailWebContext");
 }
 

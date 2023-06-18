@@ -86,7 +86,7 @@ package "[[architecture_workers.html workers]]" {
     class "ComposerWorker\n[[https://gitlab.com/dekkan/dekko/-/tree/master/Dekko/workers/ComposerWorker.qml src://Dekko/workers/ComposerWorker.qml]]" as composerworker {
     }
 
-    class "ViewWorker\n[[https://gitlab.com/dekkan/dekko/-/tree/master/Dekko/app/Dekko.qml src://Dekko/app/Dekko.qml]]" as viewworker {
+    class "ViewWorker\n[[https://gitlab.com/dekkan/dekko/-/tree/master/Dekko/app/SageteaMail.qml src://Dekko/app/SageteaMail.qml]]" as viewworker {
     }
 }
 

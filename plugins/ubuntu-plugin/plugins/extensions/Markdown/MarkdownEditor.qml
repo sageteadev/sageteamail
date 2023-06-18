@@ -1,6 +1,6 @@
 import QtQuick 2.4
 import QtQuick.Controls.Suru 2.2
-import Ubuntu.Components 1.3
+import Lomiri.Components 1.3
 import SageteaMail.Markdown 1.0
 
 ScrollView {
@@ -65,7 +65,7 @@ ScrollView {
                             verticalCenter: parent.verticalCenter
                         }
                         text: qsTr("Preview")
-                        color: UbuntuColors.blue
+                        color: LomiriColors.blue
                     }
                     onClicked: showPreview()
                 }
@@ -87,7 +87,7 @@ ScrollView {
             mouseSelectionMode: TextEdit.SelectWords
             persistentSelection: true
             selectByMouse: true
-            selectionColor: Qt.rgba(UbuntuColors.blue.r, UbuntuColors.blue.g, UbuntuColors.blue.b, 0.2)
+            selectionColor: Qt.rgba(LomiriColors.blue.r, LomiriColors.blue.g, LomiriColors.blue.b, 0.2)
             selectedTextColor: Suru.foregroundColor
             color: Suru.foregroundColor
             Keys.forwardTo: editor.plainTextOnly ? [inputOverlay] : [mdDoc, inputOverlay]
@@ -119,7 +119,7 @@ ScrollView {
                     tabWidth: 4
                     textColor: Suru.secondaryForegroundColor
                     backgroundColor: Suru.backgroundColor
-                    linkColor: UbuntuColors.blue
+                    linkColor: LomiriColors.blue
                     markupColor: Suru.neutralColor
                 }
 

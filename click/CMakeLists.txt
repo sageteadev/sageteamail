@@ -14,8 +14,8 @@ set(CLICK_MANIFEST ${CMAKE_CURRENT_SOURCE_DIR}/sageteamail.json)
 set(OTHER_MANIFEST
     ${CMAKE_CURRENT_SOURCE_DIR}/.excludes
     ${APPARMOR_MANIFEST}
-    ${CMAKE_CURRENT_SOURCE_DIR}/sageteamail.sageteamailproject_sageteamail.application
-    ${CMAKE_CURRENT_SOURCE_DIR}/sageteamail.sageteamailproject_sageteamail.service
+    ${CMAKE_CURRENT_SOURCE_DIR}/sageteamail.sagetea_sageteamail.application
+    ${CMAKE_CURRENT_SOURCE_DIR}/sageteamail.sagetea_sageteamail.service
     ${CMAKE_CURRENT_SOURCE_DIR}/sageteamail.url-dispatcher
     ${CMAKE_CURRENT_SOURCE_DIR}/sageteamail-content.json
     ${CMAKE_CURRENT_SOURCE_DIR}/sageteamailhelper-aa.json

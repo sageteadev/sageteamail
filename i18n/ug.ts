@@ -38,7 +38,7 @@
     </message>
     <message>
         <location filename="../SageteaMail/stores/Accounts/AccountSetup.qml" line="536"/>
-        <source>Sent using Dekko from my Ubuntu device</source>
+        <source>Sent using SageteaMail from my Ubuntu device</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -257,7 +257,7 @@ Would you like to use this instead?</source>
     <name>ComposeWindow</name>
     <message>
         <location filename="../plugins/ubuntu-plugin/plugins/core/mail/composer/ComposeWindow.qml" line="24"/>
-        <source>Dekko Composer</source>
+        <source>SageteaMail Composer</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -1120,7 +1120,7 @@ Would you like to use this instead?</source>
     <name>MainUI</name>
     <message>
         <location filename="../plugins/ubuntu-plugin/qml/MainUI.qml" line="17"/>
-        <source>Dekko Mail</source>
+        <source>SageteaMail Mail</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -2182,7 +2182,7 @@ Would you like to use this instead?</source>
     <name>SettingsWindow</name>
     <message>
         <location filename="../plugins/ubuntu-plugin/plugins/core/settings/SettingsWindow.qml" line="26"/>
-        <source>Dekko Settings</source>
+        <source>SageteaMail Settings</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -2222,7 +2222,7 @@ Would you like to use this instead?</source>
     <name>SmtpAccountConfiguration</name>
     <message>
         <location filename="../SageteaMail/backend/accounts/AccountConfiguration.cpp" line="459"/>
-        <source>Sent using Dekko from my Ubuntu device</source>
+        <source>Sent using SageteaMail from my Ubuntu device</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

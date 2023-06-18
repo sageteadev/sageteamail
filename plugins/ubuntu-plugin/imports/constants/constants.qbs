@@ -35,6 +35,6 @@ Product {
         condition: project.ui === "ubuntu"
         fileTagsFilter: "constants-plugin"
         qbs.install: project.ui === "ubuntu"
-        qbs.installDir: project.qmlDir + "/SageteaMail/Ubuntu/Constants"
+        qbs.installDir: project.qmlDir + "/SageteaMail/Lomiri/Constants"
     }
 }

@@ -35,7 +35,7 @@ AccountServiceAdaptor::~AccountServiceAdaptor()
 
 QList<quint64> AccountServiceAdaptor::queryAccounts(const QByteArray &accountKey, const QByteArray &sortKey, int limit)
 {
-    // handle method call org.sagetea.AccountService.queryAccounts
+    // handle method call org.dekkoproject.AccountService.queryAccounts
     QList<quint64> accounts;
     QMetaObject::invokeMethod(parent(), "queryAccounts", Q_RETURN_ARG(QList<quint64>, accounts), Q_ARG(QByteArray, accountKey), Q_ARG(QByteArray, sortKey), Q_ARG(int, limit));
     return accounts;
@@ -43,7 +43,7 @@ QList<quint64> AccountServiceAdaptor::queryAccounts(const QByteArray &accountKey
 
 void AccountServiceAdaptor::removeAccount(qulonglong id)
 {
-    // handle method call org.sagetea.AccountService.removeAccount
+    // handle method call org.dekkoproject.AccountService.removeAccount
     QMetaObject::invokeMethod(parent(), "removeAccount", Q_ARG(qulonglong, id));
 }
 

@@ -1,7 +1,6 @@
 /* Copyright (C) 2016 - 2017 Dan Chapman <dpniel@ubuntu.com>
-   Copyright (C) 2022 - 2023 Rúben Carneiro <rubencarneiro01@gmail.com>
 
-   This file is part of SageTea Mail, email client for Ubuntu devices
+   This file is part of Dekko email client for Ubuntu devices
 
    This program is free software; you can redistribute it and/or
    modify it under the terms of the GNU General Public License as
@@ -457,7 +456,7 @@ QString SmtpAccountConfiguration::initials()
 
 QString SmtpAccountConfiguration::signature() const
 {
-    static const QString defaultSig = QStringLiteral("-- \n%1").arg(tr("Sent using Dekko from my Ubuntu device"));
+    static const QString defaultSig = QStringLiteral("-- \n%1").arg(tr("Sent with SageTeaMail"));
     return m_service->value(AccountKeys::signature, defaultSig);
 }
 

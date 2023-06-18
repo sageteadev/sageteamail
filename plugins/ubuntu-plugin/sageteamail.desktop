@@ -2,10 +2,10 @@
 Version=1.0
 Type=Application
 Terminal=false
-X-Ubuntu-Touch=true
-Name=SageTea Mail
+X-Lomiri-Touch=true
+Name=Sagetea Mail
 Keywords=mail;e-mail;IMAP;SMTP;eml;MUA;
 Exec=sageteamail %U
 Icon=@ICON@
 MimeType=x-scheme-handler/mailto;application/sageteamail;x-scheme-handler/sageteamail;
-X-Ubuntu-Splash-Color=#F5F5F5
+X-Lomiri-Splash-Color=#F5F5F5

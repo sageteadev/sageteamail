@@ -10,7 +10,7 @@ DynamicLibrary {
 
     Probes.PkgConfigProbe {
         id: connectivity
-        name: "connectivity-qt1"
+        name: "lomiri-connectivity-qt1"
     }
 
     Depends { name: "cpp" }
@@ -35,7 +35,7 @@ DynamicLibrary {
 
     property stringList pkgLibs: []
     cpp.linkerFlags: {
-        if (project.useUbuntuConnectivity && connectivity.found) {
+        if (project.useLomiriConnectivity && connectivity.found) {
             autoConfig.pkgLibs.concat(connectivity.libs)
         }
         return autoConfig.pkgLibs
@@ -43,7 +43,7 @@ DynamicLibrary {
 
     property stringList pkgFlags: []
     cpp.cxxFlags: {
-        if (project.useUbuntuConnectivity && connectivity.found) {
+        if (project.useLomiriConnectivity && connectivity.found) {
             autoConfig.pkgFlags.concat(connectivity.cflags)
         }
         return autoConfig.pkgFlags;
@@ -51,7 +51,7 @@ DynamicLibrary {
 
     cpp.defines: {
         var defs = []
-        if (project.useUbuntuConnectivity && connectivity.found) {
+        if (project.useLomiriConnectivity && connectivity.found) {
             defs.concat("USE_CONNECTIVITY_API")
         }
         return defs

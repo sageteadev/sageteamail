@@ -11,5 +11,5 @@
         "audio"
     ],
     "template": "unconfined",
-    "policy_version": 16.04
+    "policy_version": 20.04
 }

@@ -13,7 +13,7 @@ Note: Alot of the current source doesn't yet follow alot of this style guide. Bu
 
 ### Namespaces
 
-All Dekko related modules are located in the `SageteaMail::` namespace. All submodule namespaces should be part of the include guard.
+All Dekko related modules are located in the `Dekko::` namespace. All submodule namespaces should be part of the include guard.
 
 Example
 ```cpp

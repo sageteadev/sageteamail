@@ -1,0 +1,33 @@
+stages:
+  - build
+  - deploy
+
+variables:
+  GIT_SUBMODULE_STRATEGY: recursive
+  DOCKER_DRIVER: overlay2
+  CLICKABLE_VERSION: "7.11.0"
+  UT_VERSION: "20.04"
+
+default:
+  image: "clickable/ci-$UT_VERSION-$ARCH:$CLICKABLE_VERSION"
+
+.arm64: &arm64
+  variables:
+    ARCH: "arm64"
+    ARCH_TRIPLET: "aarch64-linux-gnu"
+
+.sageteamail:
+  stage: build
+  tags:
+    - docker
+  script:
+    - clickable build
+  artifacts:
+    paths:
+      - 'build/$ARCH_TRIPLET/*.click'
+    when: on_success
+    expire_in: 3 week
+
+sageteamail:arm64:
+  <<: *arm64
+  extends: .sageteamail
